@@ -1,0 +1,22 @@
+GS3 FINTECH — SITE ESTÁTICO COMPLETO
+
+COMO ABRIR
+1. Extraia todo o conteúdo do ZIP.
+2. Abra o arquivo index.html no navegador.
+
+COMO PUBLICAR
+- Envie a pasta inteira para a raiz ou para uma subpasta da hospedagem.
+- GitHub Pages, Netlify, Cloudflare Pages e hospedagens HTML convencionais são compatíveis.
+- Não altere a relação entre as pastas css, js, assets, productos e transparencia.
+
+ESTRUTURA
+- index.html: página inicial.
+- Cada página interna possui seu próprio index.html completo.
+- css/styles.css: estilos, responsividade, hovers e animações.
+- js/interactions.js: modal de consultoria, fechamento e formulário.
+- assets/: imagens e marcas locais utilizadas pelo site.
+
+OBSERVAÇÃO SOBRE FORMULÁRIOS
+O formulário e o modal funcionam visualmente. Para enviar mensagens de verdade,
+conecte o evento de submit em js/interactions.js ao serviço de formulário ou ao
+backend escolhido na hospedagem.
