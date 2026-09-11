@@ -1,0 +1,3 @@
+export function DocumentList({ multiple = false, year = false }: { multiple?: boolean; year?: boolean }) {
+  return <section className="documents" aria-labelledby="documents-title"><div className="documents-heading"><h2 id="documents-title">Documentos</h2>{year && <span>Año: <strong>2026</strong></span>}</div><div className="document-rows">{(multiple?['pdf','word','excel']:['pdf']).map(format=><div className="document-row" key={format} aria-disabled="true"><img src={`/assets/doc-${format}.svg`} width="44" height="44" alt={format.toUpperCase()} /><div><p>Gerenciamento de Risco – Julho de 2026</p><small>Gerenciamento de Risco – Julho de 2026</small></div><span className="document-unavailable">Próximamente</span></div>)}</div></section>;
+}

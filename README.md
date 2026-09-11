@@ -13,14 +13,11 @@ npm run dev
 
 Para gerar a versão de produção: `npm run build`.
 
-## Conteúdo pendente
+## Estado atual e próximas etapas
 
-- Telefone, endereço e dados legais oficiais (os valores fictícios do Figma foram omitidos).
-- URLs oficiais das redes sociais (ícones preservados, ainda sem links).
-- PDFs ou URLs de políticas, código de ética, PLD/FT, canal de denúncias, relatórios e taxas.
-- Destinos definitivos para Serviços, Nossa história e Trabalhe conosco.
+As dez referências adicionais foram integradas: modal de serviços, página sobre o Grupo Sarabia e oito páginas de transparência. O botão Nuestra historia da home aponta para a página sobre em `/historia`.
 
-Até receber os destinos definitivos, os links textuais correspondentes abrem uma consulta por e-mail para o endereço mostrado no Figma. O botão inicial rola até a seção de serviços. Nenhuma mensagem é enviada automaticamente.
+Os documentos e o formulário de denúncias permanecem desativados por decisão do usuário. Consulte `PENDENCIAS.md` antes de alterar esses componentes ou ativar integrações. Os dados e nomes de documentos são os exemplos do Figma; aguardam os arquivos definitivos.
 
 ## Referências
 
