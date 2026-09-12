@@ -50,8 +50,10 @@ const cards: StoryCard[] = [
 export function StoryboardScroll() {
   const sectionRef = useRef<HTMLElement>(null);
   const lockRef = useRef(false);
-  const scrollIntentRef = useRef({ direction: 0, count: 0 });
+  const scrollIntentRef = useRef({ direction: 0, distance: 0, lastAt: 0 });
+  const nudgeTimerRef = useRef<number | null>(null);
   const [active, setActive] = useState(0);
+  const [nudgeDirection, setNudgeDirection] = useState<0 | 1 | -1>(0);
 
   useEffect(() => {
     const onWheel = (event: WheelEvent) => {
@@ -76,21 +78,23 @@ export function StoryboardScroll() {
 
       event.preventDefault();
       const intent = scrollIntentRef.current;
-      if (intent.direction !== direction) {
+      const now = performance.now();
+      if (intent.direction !== direction || now - intent.lastAt > 650) {
         intent.direction = direction;
-        intent.count = 0;
+        intent.distance = 0;
       }
-      intent.count += 1;
+      intent.distance += Math.min(Math.abs(event.deltaY), 150);
+      intent.lastAt = now;
 
-      if (intent.count < 2) {
-        lockRef.current = true;
-        window.setTimeout(() => {
-          lockRef.current = false;
-        }, 500);
+      if (intent.distance < 170) {
+        setNudgeDirection(direction);
+        if (nudgeTimerRef.current) window.clearTimeout(nudgeTimerRef.current);
+        nudgeTimerRef.current = window.setTimeout(() => setNudgeDirection(0), 180);
         return;
       }
 
-      intent.count = 0;
+      intent.distance = 0;
+      setNudgeDirection(0);
       lockRef.current = true;
       setActive(next);
       window.setTimeout(() => {
@@ -99,7 +103,10 @@ export function StoryboardScroll() {
     };
 
     window.addEventListener('wheel', onWheel, { passive: false });
-    return () => window.removeEventListener('wheel', onWheel);
+    return () => {
+      window.removeEventListener('wheel', onWheel);
+      if (nudgeTimerRef.current) window.clearTimeout(nudgeTimerRef.current);
+    };
   }, [active]);
 
   return (
@@ -107,7 +114,7 @@ export function StoryboardScroll() {
       <div className="storyboard-sticky">
         <div className="storyboard-stage">
           {cards.map((card, index) => (
-            <article className={`storyboard-card ${index === active ? 'is-active' : ''}`} key={card.title} aria-hidden={index !== active}>
+            <article className={`storyboard-card ${index === active ? 'is-active' : ''} ${index === active && nudgeDirection === 1 ? 'is-nudging-forward' : ''} ${index === active && nudgeDirection === -1 ? 'is-nudging-backward' : ''}`} key={card.title} aria-hidden={index !== active}>
               <div className="storyboard-visual">
                 <img className="storyboard-background" src="/assets/history-imgFixedBg1085.png" alt="" aria-hidden="true" />
                 <div className="storyboard-wash" aria-hidden="true" />
