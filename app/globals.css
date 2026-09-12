@@ -37,3 +37,7 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 /* Keep the original brand spacing; animate two identical sets only. */
 .brand-marquee{container-type:inline-size}.brand-marquee-window{overflow:hidden}.brand-marquee-track{display:flex;width:max-content;animation:brands-scroll 36s linear infinite;will-change:transform}.brand-marquee-set{flex:0 0 auto;width:max-content;min-width:100cqw}.brand-marquee .group-brands{flex-wrap:nowrap}.brand-marquee .group-brands>div{flex-shrink:0}.brand-marquee-window:hover .brand-marquee-track{animation-play-state:paused}@keyframes brands-scroll{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.brand-marquee-track{animation:none;will-change:auto;width:auto}.brand-marquee-set{width:100%;min-width:0}.brand-marquee-set[aria-hidden]{display:none}.brand-marquee .group-brands{flex-wrap:wrap}}
+
+/* Figma 1052:16383: preserve the full SVG scale, clipping North America above the card. */
+.group-intro{container-type:inline-size}.group-map-crop{position:absolute;inset:0;overflow:hidden;pointer-events:none}.group-map-crop .group-map{left:15.8%;right:auto;top:calc(16px - 51.55cqw);bottom:auto;width:90.72%;max-width:none;height:auto;aspect-ratio:1262.12/1314.79;object-fit:contain}
+@media(max-width:767px){.group-map-crop{top:auto;bottom:0;height:340px}.group-map-crop .group-map{left:-43%;top:-100%;width:180%;height:auto}}
