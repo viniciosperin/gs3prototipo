@@ -1,5 +1,6 @@
 import { SiteFooter } from '@/components/site-footer';
 import { ServicesModal } from '@/components/services-modal';
+import { HeroVideo } from '@/components/hero-video';
 const A = '/assets/';
 function Action({ href, children, filled = false }: { href: string; children: React.ReactNode; filled?: boolean }) {
   return <a className={`action${filled ? ' action-filled' : ''}`} href={href}>{children}<img src={`${A}arrow-${filled ? 'white' : 'green'}.svg`} width="20" height="20" alt="" /></a>;
@@ -11,7 +12,7 @@ export default function Home() {
     <main id="contenido">
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy"><h1 id="hero-title"><span>Mucho más que crédito.</span> Un parceiro del productor</h1><div className="hero-description"><p>Conocemos lo que implica producir porque también venimos del campo. Por eso, facilitamos el acceso al crédito con una atención ágil, cercana y pensada para la realidad del agro.</p><ServicesModal /></div></div>
-        <div className="hero-image"><img src={`${A}hero.png`} alt="Dos generaciones de productores junto al campo al atardecer" fetchPriority="high" /></div>
+        <div className="hero-image"><HeroVideo /></div>
       </section>
       <section className="solutions" id="servicios" aria-labelledby="solutions-title">
         <h2 id="solutions-title">Soluciones financieras<br /><span>con los valores del campo,</span><br />para cada etapa del ciclo productivo.</h2>

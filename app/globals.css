@@ -116,3 +116,5 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 .footer-group a{transition:color .2s ease;text-decoration:none}
 .footer-group a:hover{color:#18c11f;text-decoration:none}
 .footer-group a:active{color:#14841d;text-decoration:none}
+
+.hero-image video{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scaleX(-1)}
