@@ -95,29 +95,19 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 .action-filled img{filter:brightness(0) invert(1)}
 
 /* Figma 1063:1243 — document links. */
-.document-row{justify-content:space-between;border:1px solid #f0f3f0;box-shadow:none;color:#0d160d;transition:background-color .2s ease,box-shadow .2s ease}
-.document-row:hover{box-shadow:0 2px 1px rgba(0,0,0,.08)}
-.document-row:active{background:#f9faf9;box-shadow:0 2px 1px rgba(0,0,0,.08)}
+.document-row{justify-content:space-between;border:1px solid #f0f3f0;box-shadow:none;color:#0d160d;transition:background-color .38s cubic-bezier(.16,1,.3,1),box-shadow .38s cubic-bezier(.16,1,.3,1),transform .38s cubic-bezier(.16,1,.3,1)}
+.document-row:hover{box-shadow:0 8px 18px rgba(13,22,13,.08);transform:translateY(-2px)}
+.document-row:active{background:#f9faf9;box-shadow:0 2px 1px rgba(0,0,0,.08);transform:translateY(0)}
 .document-pdf{display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border-radius:4px;background:#e51b1b}
 .document-pdf img{width:24px;height:24px}
 .document-content{display:flex;flex:1;min-width:0;flex-direction:column;gap:0}
 .document-content>span{font-size:20px;font-weight:500;line-height:1.5;letter-spacing:-.1px}
 .document-content small{font-size:14px;line-height:1.6;letter-spacing:.14px}
 .document-cta{display:flex;align-items:center;justify-content:center;gap:4px;margin-left:auto;color:#1a271a;font-size:18px;font-weight:600;line-height:1.4;letter-spacing:-.09px;white-space:nowrap}
-.document-arrow{position:relative;display:block;width:20px;height:20px;flex-shrink:0}
-.document-arrow img{position:absolute;inset:0;width:20px;height:20px;max-width:none;transition:opacity .2s ease}
-.document-arrow-hover,.document-arrow-pressed{opacity:0}
-.document-row:hover .document-arrow-default{opacity:0}
-.document-row:hover .document-arrow-hover{opacity:1}
-.document-row:active .document-arrow-hover{opacity:0}
-.document-row:active .document-arrow-pressed{opacity:1}
+.document-arrow{display:block;width:20px;height:20px;flex-shrink:0}
+.document-arrow img{display:block;width:20px;height:20px;max-width:none;transform-origin:center;transition:transform .52s cubic-bezier(.16,1,.3,1)}
+.document-row:hover .document-arrow img,.document-row:active .document-arrow img{transform:rotate(45deg)}
 .document-row:active .document-cta{color:#14841d}
 @media(max-width:650px){.document-row{align-items:center;flex-wrap:nowrap}.document-content{min-width:0}.document-cta{font-size:16px}}
 
-/* Gentle document feedback and an ambient hero drift. */
-.document-arrow img{transition:opacity .42s cubic-bezier(.16,1,.3,1)}
-.hero-image img{animation:hero-landscape-drift 22s cubic-bezier(.45,0,.55,1) infinite alternate;will-change:transform}
-.hero-image::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 22% 20%,rgba(255,245,212,.18),transparent 42%);mix-blend-mode:soft-light;animation:hero-light-breeze 18s ease-in-out infinite alternate}
-@keyframes hero-landscape-drift{from{transform:scaleX(-1) scale(1.015) translate3d(-.35%,.15%,0)}to{transform:scaleX(-1) scale(1.045) translate3d(.45%,-.2%,0)}}
-@keyframes hero-light-breeze{from{opacity:.38;transform:translate3d(-2%,1%,0)}to{opacity:.64;transform:translate3d(2%,-1%,0)}}
-@media(prefers-reduced-motion:reduce){.document-arrow img,.hero-image img,.hero-image::after{animation:none;transition:none}}
+@media(prefers-reduced-motion:reduce){.document-row,.document-arrow img{transition:none}.document-row:hover,.document-row:active,.document-row:hover .document-arrow img,.document-row:active .document-arrow img{transform:none}}
