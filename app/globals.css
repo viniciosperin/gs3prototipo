@@ -65,8 +65,17 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 @media(max-width:767px){.storyboard-scroll{height:auto;background:#f9faf9}.storyboard-sticky{position:relative;height:auto;overflow:visible}.storyboard-stage{display:block;padding:32px 16px}.storyboard-card,.storyboard-card.is-active{position:relative;inset:auto;display:block;opacity:1;transform:none;pointer-events:auto;margin-bottom:48px}.storyboard-visual{height:440px;padding:64px 32px;margin-bottom:32px}.storyboard-image-frame{height:330px}.storyboard-copy{padding:0 16px;max-width:none}.storyboard-copy h2{max-width:none}.storyboard-indicator{display:none}}
 @media(prefers-reduced-motion:reduce){.storyboard-card,.storyboard-indicator span{transition:none}}
 
-@media(min-width:768px) and (max-width:1100px){.group-hero{position:relative;display:block;height:506px;min-height:506px;padding:0}.group-copy{position:absolute;left:55px;top:222.5px;width:min(754.296px,calc(100% - 110px));max-width:none}.group-copy .sarabia-group{margin-bottom:24px}.group-copy h1{max-width:754.296px;font-size:48px;line-height:1.15;letter-spacing:-.72px}.group-map-crop{position:absolute;inset:0;width:auto;height:auto;overflow:hidden}.group-map-crop .group-map{left:15.8%;right:auto;top:-107.09%;bottom:auto;width:90.72%;height:196.33%;max-width:none;aspect-ratio:auto;transform:none;object-fit:fill}.brand-marquee{margin-top:0}}
+@media(min-width:768px) and (max-width:1100px){.group-hero{position:relative;display:block;height:506px;min-height:506px;padding:0}.group-copy{position:absolute;left:55px;top:222.5px;width:min(754.296px,calc(100% - 110px));max-width:none}.group-copy .sarabia-group{margin-bottom:24px}.group-copy h1{max-width:754.296px;font-size:48px;line-height:1.15;letter-spacing:-.72px}.group-map-crop{position:absolute;inset:0;width:auto;height:auto;overflow:hidden}.group-map-crop .group-map{left:15.8%;right:auto;top:-107.09%;bottom:auto;width:90.72%;height:196.33%;max-width:none;aspect-ratio:auto;transform:none;object-fit:fill}.brand-marquee{margin-top:72px}}
 @media(min-width:768px) and (max-width:899px){.group-copy{left:40px;top:228px;width:calc(100% - 80px)}.group-copy h1{font-size:40px;line-height:1.15}}
-@media(max-width:767px){.brand-marquee .group-brands{transform:scale(.82);transform-origin:left top;margin-bottom:-18px}}
+@media(max-width:767px){.brand-marquee .group-brands{transform:none;margin-bottom:0}}
+
+/* Brand ribbon: preserve the original internal spacing while keeping every block aligned. */
+.brand-marquee{margin-top:72px}
+.brand-marquee .group-brands{align-items:center}
+.brand-marquee .group-brands>div{display:grid;grid-template-rows:22.4px 1fr;align-items:center;align-content:center;gap:12px;min-height:99.332px}
+.brand-marquee .group-brands>div>p{margin:0;line-height:1.6}
+.brand-marquee .group-brands>div>img,.brand-marquee .group-brands>div>.brand-lockup{align-self:center}
+.brand-marquee .group-brands>div:not(:last-child)::after,.brand-marquee .group-brands>div:first-child::before{top:50%;transform:translateY(-50%)}
+.brand-marquee .group-brands>div:first-child::before{content:"";position:absolute;left:0;width:1px;height:51.332px;background:#dde3dd}
 
 .modal-close img{transition:transform .2s cubic-bezier(.22,.61,.36,1)}.modal-close:hover img{transform:rotate(5deg)}.modal-close:active img{transform:scale(.92)}
