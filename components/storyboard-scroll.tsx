@@ -50,6 +50,7 @@ const cards: StoryCard[] = [
 export function StoryboardScroll() {
   const sectionRef = useRef<HTMLElement>(null);
   const lockRef = useRef(false);
+  const scrollIntentRef = useRef({ direction: 0, count: 0 });
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -62,14 +63,39 @@ export function StoryboardScroll() {
 
       const direction = event.deltaY > 0 ? 1 : -1;
       const next = active + direction;
-      if (next < 0 || next >= cards.length) return;
+      if (next < 0) return;
+      if (next >= cards.length) {
+        event.preventDefault();
+        lockRef.current = true;
+        document.querySelector('.bottom-wrap')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.setTimeout(() => {
+          lockRef.current = false;
+        }, 800);
+        return;
+      }
 
       event.preventDefault();
+      const intent = scrollIntentRef.current;
+      if (intent.direction !== direction) {
+        intent.direction = direction;
+        intent.count = 0;
+      }
+      intent.count += 1;
+
+      if (intent.count < 2) {
+        lockRef.current = true;
+        window.setTimeout(() => {
+          lockRef.current = false;
+        }, 500);
+        return;
+      }
+
+      intent.count = 0;
       lockRef.current = true;
       setActive(next);
       window.setTimeout(() => {
         lockRef.current = false;
-      }, 620);
+      }, 880);
     };
 
     window.addEventListener('wheel', onWheel, { passive: false });
