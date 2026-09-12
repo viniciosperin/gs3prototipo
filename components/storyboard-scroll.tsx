@@ -49,72 +49,43 @@ const cards: StoryCard[] = [
 
 export function StoryboardScroll() {
   const sectionRef = useRef<HTMLElement>(null);
-  const lockRef = useRef(false);
-  const scrollIntentRef = useRef({ direction: 0, distance: 0, lastAt: 0 });
-  const nudgeTimerRef = useRef<number | null>(null);
   const [active, setActive] = useState(0);
-  const [nudgeDirection, setNudgeDirection] = useState<0 | 1 | -1>(0);
 
   useEffect(() => {
-    const onWheel = (event: WheelEvent) => {
+    let animationFrame = 0;
+
+    const updateActiveCard = () => {
       const section = sectionRef.current;
-      if (!section || Math.abs(event.deltaY) < 2) return;
+      if (!section) return;
       const rect = section.getBoundingClientRect();
-      const isPinned = rect.top <= 1 && rect.bottom >= window.innerHeight - 1;
-      if (!isPinned || lockRef.current) return;
-
-      const direction = event.deltaY > 0 ? 1 : -1;
-      const next = active + direction;
-      if (next < 0) return;
-      if (next >= cards.length) {
-        event.preventDefault();
-        lockRef.current = true;
-        document.querySelector('.bottom-wrap')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        window.setTimeout(() => {
-          lockRef.current = false;
-        }, 800);
-        return;
-      }
-
-      event.preventDefault();
-      const intent = scrollIntentRef.current;
-      const now = performance.now();
-      if (intent.direction !== direction || now - intent.lastAt > 650) {
-        intent.direction = direction;
-        intent.distance = 0;
-      }
-      intent.distance += Math.min(Math.abs(event.deltaY), 150);
-      intent.lastAt = now;
-
-      if (intent.distance < 170) {
-        setNudgeDirection(direction);
-        if (nudgeTimerRef.current) window.clearTimeout(nudgeTimerRef.current);
-        nudgeTimerRef.current = window.setTimeout(() => setNudgeDirection(0), 180);
-        return;
-      }
-
-      intent.distance = 0;
-      setNudgeDirection(0);
-      lockRef.current = true;
-      setActive(next);
-      window.setTimeout(() => {
-        lockRef.current = false;
-      }, 880);
+      const scrollableDistance = section.offsetHeight - window.innerHeight;
+      if (scrollableDistance <= 0) return;
+      const progress = Math.min(1, Math.max(0, -rect.top / scrollableDistance));
+      const next = Math.min(cards.length - 1, Math.floor(progress * cards.length));
+      setActive((current) => current === next ? current : next);
     };
 
-    window.addEventListener('wheel', onWheel, { passive: false });
+    const onScroll = () => {
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(updateActiveCard);
+    };
+
+    updateActiveCard();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
     return () => {
-      window.removeEventListener('wheel', onWheel);
-      if (nudgeTimerRef.current) window.clearTimeout(nudgeTimerRef.current);
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
     };
-  }, [active]);
+  }, []);
 
   return (
     <section className="storyboard-scroll" ref={sectionRef} aria-label="Evolução do Grupo Sarabia">
       <div className="storyboard-sticky">
         <div className="storyboard-stage">
           {cards.map((card, index) => (
-            <article className={`storyboard-card ${index === active ? 'is-active' : ''} ${index === active && nudgeDirection === 1 ? 'is-nudging-forward' : ''} ${index === active && nudgeDirection === -1 ? 'is-nudging-backward' : ''}`} key={card.title} aria-hidden={index !== active}>
+            <article className={`storyboard-card ${index === active ? 'is-active' : ''}`} key={card.title} aria-hidden={index !== active}>
               <div className="storyboard-visual">
                 <img className="storyboard-background" src="/assets/history-imgFixedBg1085.png" alt="" aria-hidden="true" />
                 <div className="storyboard-wash" aria-hidden="true" />
