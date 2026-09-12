@@ -79,3 +79,14 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 .brand-marquee .group-brands>div:first-child::before{content:"";position:absolute;left:0;width:1px;height:51.332px;background:#dde3dd}
 
 .modal-close img{transition:transform .2s cubic-bezier(.22,.61,.36,1)}.modal-close:hover img{transform:rotate(5deg)}.modal-close:active img{transform:scale(.92)}
+
+/* Figma 1062:1083 — button interaction states. */
+.action{border-color:#14841d;color:#14841d}
+.action img{transition:transform .22s cubic-bezier(.22,.61,.36,1),filter .2s ease}
+.action:hover{background:#14a31a;border-color:#14a31a;color:#f9faf9}
+.action:hover img{transform:rotate(45deg);filter:brightness(0) invert(1)}
+.action:active{background:#0f6316;border-color:#0f6316;color:#f9faf9}
+.action:active img{transform:rotate(45deg);filter:brightness(0) invert(1)}
+.action-filled{background:#18c11f;border-color:#18c11f}
+.action-filled:hover{background:#14841d;border-color:#14841d}
+.action-filled:active{background:#063708;border-color:#063708}
