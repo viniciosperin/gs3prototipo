@@ -90,3 +90,6 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 .action-filled{background:#18c11f;border-color:#18c11f}
 .action-filled:hover{background:#14841d;border-color:#14841d}
 .action-filled:active{background:#063708;border-color:#063708}
+.action img{transition-duration:.32s,.2s;transition-timing-function:cubic-bezier(.16,1,.3,1),ease}
+.action-filled,.action-filled:hover,.action-filled:active{color:#f9faf9}
+.action-filled img{filter:brightness(0) invert(1)}
