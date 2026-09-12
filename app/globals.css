@@ -111,3 +111,8 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 @media(max-width:650px){.document-row{align-items:center;flex-wrap:nowrap}.document-content{min-width:0}.document-cta{font-size:16px}}
 
 @media(prefers-reduced-motion:reduce){.document-row,.document-arrow img{transition:none}.document-row:hover .document-arrow img,.document-row:active .document-arrow img{transform:none}}
+
+/* Footer text links */
+.footer-group a{transition:color .2s ease;text-decoration:none}
+.footer-group a:hover{color:#18c11f;text-decoration:none}
+.footer-group a:active{color:#14841d;text-decoration:none}
