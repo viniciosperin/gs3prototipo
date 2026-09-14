@@ -1,4 +1,4 @@
-# GS3 — Site React
+# GS3 — Protótipo
 
 Implementação responsiva da página New Home do Figma, em React 19 e TypeScript, com CSS e fonte local Overused Grotesk.
 
