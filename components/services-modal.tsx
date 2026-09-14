@@ -3,9 +3,9 @@
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogClose, DialogTrigger } from '@/components/ui/dialog';
 
 const services = [
-  ['Crédito Rural', 'Financiamos el capital de giro de la actividad agropecuaria: los fondos que el productor y las redes de distribución necesitan para sostener su flujo a lo largo de todo el ciclo productivo.'],
-  ['Descuento de documentos', 'Convertí en liquidez inmediata los cheques diferidos y pagarés que ya tenés en tu poder, sin esperar la fecha de vencimiento.'],
-  ['Anticipo de facturas', 'Con el anticipo de facturas, GS3 te adelanta el importe de tus facturas por cobrar y transformás tu crédito comercial en capital disponible hoy.'],
+  ['Crédito Rural', 'Financiamos el capital de giro de la actividad agropecuaria: los fondos que el productor y las redes de distribución necesitan para sostener su flujo a lo largo de todo el ciclo productivo.', '/assets/bank-card.svg'],
+  ['Descuento de documentos', 'Convertí en liquidez inmediata los cheques diferidos y pagarés que ya tenés en tu poder, sin esperar la fecha de vencimiento.', '/assets/receipt-fill.svg'],
+  ['Anticipo de facturas', 'Con el anticipo de facturas, GS3 te adelantamos el importe de tus facturas por cobrar y transformás tu crédito comercial en capital disponible hoy.', '/assets/file-text-fill.svg'],
 ];
 
 export function ServicesModal() {
@@ -19,7 +19,7 @@ export function ServicesModal() {
       </div>
       <div className="services-body">
         <div className="services-intro"><h3>Soluciones financieras para el agronegocio</h3><DialogDescription className="services-description">Como Otorgante de Crédito Dinerario (OCD), acompañamos a productores, distribuidores y empresas de la cadena agropecuaria con soluciones financieras adaptadas a sus distintas necesidades de capital y liquidez. Evaluamos cada operación con conocimiento del sector, considerando los ciclos productivos, el flujo comercial y la realidad de quienes trabajan en el agro.</DialogDescription></div>
-        <div className="service-cards">{services.map(([title,description])=><article key={title}><img src="/assets/bank-card.svg" width="24" height="24" alt="" /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
+        <div className="service-cards">{services.map(([title,description,icon])=><article key={title}><img src={icon} width="24" height="24" alt="" /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
       </div>
     </DialogContent>
   </Dialog>;
