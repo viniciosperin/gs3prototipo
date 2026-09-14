@@ -1,23 +1,28 @@
-# GS3 Fintech Paraguay — protótipo estático
+# GS3 — Site React
 
-Site completo em HTML, CSS e JavaScript puro. Todos os estilos, fontes, imagens e scripts usados pela interface estão dentro desta pasta.
+Implementação responsiva da página New Home do Figma, em React 19 e TypeScript, com CSS e fonte local Overused Grotesk.
 
-## Abrir localmente
+## Executar
 
-Abra `index.html` no navegador. Para testar como hospedagem, execute um servidor estático na raiz da pasta, por exemplo:
+Requer Node.js 22.13 ou superior.
 
-```bash
-python3 -m http.server 8080
+```sh
+npm install
+npm run dev
 ```
 
-## GitHub Pages
+Para gerar a versão de produção: `npm run build`.
 
-1. Envie o conteúdo desta pasta para um repositório.
-2. Em **Settings → Pages**, escolha **Deploy from a branch**.
-3. Selecione a branch principal e a pasta `/ (root)`.
+## Estado atual e próximas etapas
 
-Os links são relativos e funcionam tanto no domínio principal quanto em uma subpasta de projeto.
+As dez referências adicionais foram integradas: modal de serviços, página sobre o Grupo Sarabia e oito páginas de transparência. O botão Nuestra historia da home aponta para a página sobre em `/historia`.
 
-## Formulários
+Os documentos e o formulário de denúncias permanecem desativados por decisão do usuário. Consulte `PENDENCIAS.md` antes de alterar esses componentes ou ativar integrações. Os dados e nomes de documentos são os exemplos do Figma; aguardam os arquivos definitivos.
 
-O modal, campos e animações funcionam no navegador. Para enviar os dados de verdade, conecte o evento `submit` em `js/interactions.js` ao serviço de formulários ou backend escolhido.
+## Referências
+
+Design: https://www.figma.com/design/GFTcEgRFngTiBP85Z9EbNu/GS3?node-id=936-6716
+
+Fonte: https://github.com/RandomMaerks/Overused-Grotesk — licença incluída em public/fonts/LICENSE.txt.
+
+Imagens e marcas foram exportadas do Figma e salvas localmente, sem dependência dos links temporários de exportação.
