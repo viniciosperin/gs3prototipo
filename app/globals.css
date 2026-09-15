@@ -124,3 +124,8 @@ footer{padding-top:88px}
 .footer-group a:active{color:#14841d;text-decoration:none}
 
 .hero-image video{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scaleX(-1)}
+
+/* First-fold alignment */
+@media(min-width:768px){.hero{padding-top:160px}.group-intro{margin-top:0}}
+
+.policy-row .response-time{padding-left:4px}
