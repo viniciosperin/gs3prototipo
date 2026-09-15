@@ -129,3 +129,5 @@ footer{padding-top:88px}
 @media(min-width:768px){.hero{padding-top:160px}.group-intro{margin-top:0}}
 
 .policy-row .response-time{padding-left:4px}
+
+@media(min-width:768px){.brand-marquee{margin-top:12px}}
