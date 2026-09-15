@@ -24,6 +24,16 @@ const cards: StoryCard[] = [
     alt: 'Complejo industrial del Grupo Sarabia',
   },
   {
+    eyebrow: 'LA EMPRESA DE TECNOLOGIA DEL GRUPO',
+    title: 'Nace un movimiento',
+    paragraphs: [
+      'H2O Innovation nace para transformar tendencias tecnológicas y oportunidades en capacidades, soluciones y nuevos negocios para las empresas del Grupo Sarabia y el agronegocio.',
+      'A partir de una visión orientada al futuro, conecta estrategia, tecnología, datos y conocimiento para desarrollar productos, impulsar nuevas oportunidades y acompañar la evolución del sector.',
+    ],
+    image: '/assets/history-imgImg2.png',
+    alt: 'Tecnología e innovación de H2O Innovation',
+  },
+  {
     eyebrow: 'NUEVOS NEGÓCIOS',
     title: 'La fintech del agronegocio',
     paragraphs: [
@@ -34,16 +44,6 @@ const cards: StoryCard[] = [
     image: '/assets/history-imgImg1085.png',
     overlay: '/assets/history-imgImg1.png',
     alt: 'Operação financeira da GS3',
-  },
-  {
-    eyebrow: 'LA EMPRESA DE TECNOLOGIA DEL GRUPO',
-    title: 'Nace un movimiento',
-    paragraphs: [
-      'H2O Innovation nace para transformar tendencias tecnológicas y oportunidades en capacidades, soluciones y nuevos negocios para las empresas del Grupo Sarabia y el agronegocio.',
-      'A partir de una visión orientada al futuro, conecta estrategia, tecnología, datos y conocimiento para desarrollar productos, impulsar nuevas oportunidades y acompañar la evolución del sector.',
-    ],
-    image: '/assets/history-imgImg2.png',
-    alt: 'Tecnología e innovación de H2O Innovation',
   },
 ];
 
