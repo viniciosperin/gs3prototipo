@@ -65,7 +65,7 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 @media(max-width:767px){.storyboard-scroll{height:auto;background:#f9faf9}.storyboard-sticky{position:relative;height:auto;overflow:visible}.storyboard-stage{display:block;padding:32px 16px}.storyboard-card,.storyboard-card.is-active{position:relative;inset:auto;display:block;opacity:1;transform:none;pointer-events:auto;margin-bottom:48px}.storyboard-visual{height:440px;padding:64px 32px;margin-bottom:32px}.storyboard-image-frame{height:330px}.storyboard-copy{padding:0 16px;max-width:none}.storyboard-copy h2{max-width:none}.storyboard-indicator{display:none}}
 @media(prefers-reduced-motion:reduce){.storyboard-card,.storyboard-indicator span{transition:none}}
 
-@media(min-width:768px) and (max-width:1100px){.group-hero{position:relative;display:block;height:506px;min-height:506px;padding:0}.group-copy{position:absolute;left:55px;top:222.5px;width:min(754.296px,calc(100% - 110px));max-width:none}.group-copy .sarabia-group{margin-bottom:24px}.group-copy h1{max-width:754.296px;font-size:48px;line-height:1.15;letter-spacing:-.72px}.group-map-crop{position:absolute;inset:0;width:auto;height:auto;overflow:hidden}.group-map-crop .group-map{left:15.8%;right:auto;top:-107.09%;bottom:auto;width:90.72%;height:196.33%;max-width:none;aspect-ratio:auto;transform:none;object-fit:fill}.brand-marquee{margin-top:72px}}
+@media(min-width:768px) and (max-width:1100px){.group-hero{position:relative;display:block;height:506px;min-height:506px;padding:0}.group-copy{position:absolute;left:55px;top:222.5px;width:min(754.296px,calc(100% - 110px));max-width:none}.group-copy .sarabia-group{margin-bottom:24px}.group-copy h1{max-width:754.296px;font-size:48px;line-height:1.15;letter-spacing:-.72px}.group-map-crop{position:absolute;inset:0;width:auto;height:auto;overflow:hidden}.group-map-crop .group-map{left:15.8%;right:auto;top:-107.09%;bottom:auto;width:90.72%;height:auto;max-width:none;aspect-ratio:1262.12/1314.79;transform:none;object-fit:contain}.brand-marquee{margin-top:72px}}
 @media(min-width:768px) and (max-width:899px){.group-copy{left:40px;top:228px;width:calc(100% - 80px)}.group-copy h1{font-size:40px;line-height:1.15}}
 @media(max-width:767px){.brand-marquee .group-brands{transform:none;margin-bottom:0}}
 
@@ -134,7 +134,7 @@ footer{padding-top:88px}
 
 /* Home — versão de dois valores, conforme Figma 1285:13754. */
 @media(min-width:768px){.values{grid-template-columns:minmax(0,515fr) minmax(0,741fr);gap:24px;margin-top:24px}.family-copy{max-width:none}.family-copy h3,.family-copy p{max-width:624px}.family-image{overflow:hidden}.family-image img{position:absolute;top:-39.17%;left:0;width:100%;height:191.84%;max-width:none;object-fit:cover}}
-.history-background{opacity:.2;object-position:center bottom}
+.history-background{opacity:.2;object-position:center bottom}.history>.history-background{filter:grayscale(1)}
 
 /* First-fold alignment */
 @media(min-width:768px){.hero{padding-top:160px}.group-intro{margin-top:0}}
@@ -155,6 +155,159 @@ footer{padding-top:88px}
 .about-page>.bottom-wrap{padding:24px}.history-closing{position:relative;isolation:isolate;min-height:368px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:72px 76px;border-radius:16px 16px 0 0;background:#063708;color:#edfced;text-align:center}.history-closing-background,.history-closing-curve{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.history-closing-background{z-index:-3;object-fit:cover;object-position:bottom;opacity:.2}.history-closing-curve{z-index:-2;max-width:none;width:101%;height:1026px;left:10.6%;top:52px}.history-closing h2{max-width:994px;font-size:48px;font-weight:350;line-height:1.15;letter-spacing:-.72px}.history-closing h2 span{color:#a6f2a8}.about-page footer{margin:0;border-radius:0 0 16px 16px;padding:88px 56px 32px}.about-page .footer-logo,.about-page .footer-columns{margin-bottom:48px}
 @media(max-width:767px){.history-closing{min-height:300px;padding:64px 24px}.history-closing-curve{height:100%;width:150%;left:-10%;top:0}.history-closing h2{font-size:36px}.about-page footer{padding:64px 24px 32px}}
 
+/* Nuestra historia — escalonamento tipográfico responsivo. */
+@media(min-width:1024px) and (max-width:1250px){.group-copy h1{font-size:58px}.group-copy>p{font-size:24px}.storyboard-heading h2{font-size:32px}.storyboard-copy h3{font-size:24px}.storyboard-body{font-size:17px}.history-closing h2{font-size:42px;max-width:900px}}
+@media(min-width:768px) and (max-width:1023px){.group-copy h1{font-size:50px}.group-copy>p{font-size:22px}.storyboard-heading h2{font-size:30px}.storyboard-copy h3{font-size:22px}.storyboard-body{font-size:16px}.history-closing h2{font-size:36px;max-width:780px}}
+@media(max-width:767px){.group-copy h1{font-size:40px}.group-copy>p{font-size:20px}.storyboard-heading h2{font-size:28px}.storyboard-copy h3{font-size:24px}.storyboard-body{font-size:17px}.history-closing h2{font-size:30px;line-height:1.18}}
+@media(max-width:480px){.group-copy h1{font-size:36px}.group-copy>p{font-size:18px}.storyboard-heading h2{font-size:26px}.storyboard-copy h3{font-size:22px}.storyboard-body{font-size:16px}.history-closing h2{font-size:28px}}
+
+/* Página Somos — Figma 1309:1294. */
+.about-page .group-intro{margin:0 24px 24px;padding:16px 0;border-color:#dde3dd;background:#f9faf9}
+.about-page .group-hero{position:relative;height:669px;min-height:669px;padding:0;overflow:hidden}
+.about-page .group-copy{position:absolute;z-index:2;left:83px;top:251.5px;width:622px;max-width:calc(100% - 166px)}
+.about-page .sarabia-group{margin-bottom:16px}
+.about-page .group-copy h1{max-width:622px;margin:0;color:#0d160d;font-size:32px!important;font-weight:350!important;line-height:1.3;letter-spacing:-.16px}
+.about-page .group-copy h1 span{color:#14a31a;font-weight:500!important}
+.about-page .group-map-crop{position:absolute;inset:0;overflow:hidden}
+.about-page .group-map-crop .group-map{position:absolute;left:7.23%;top:-118.47%;width:98.13%;height:auto;max-width:none;aspect-ratio:1262.12/1314.79;object-fit:contain;object-position:center}
+.about-page .brand-marquee{height:164px;margin-top:0;display:flex;align-items:center;overflow:hidden}
+.about-page .brand-marquee-window{width:100%}
+.about-page .brand-marquee .group-brands{min-height:164px;padding:24px 0;align-items:center}
+.about-page .brand-marquee .group-brands>div{gap:12px;min-height:100px;align-content:center}
+.about-page .storyboard-scroll{padding:48px 24px 72px}
+.about-page .storyboard-heading{margin-bottom:24px}
+.about-page .storyboard-heading h2{color:#0d160d;font-size:36px;font-weight:350!important;line-height:1.2;letter-spacing:-.36px}
+.about-page .storyboard-copy h3{font-size:28px;font-weight:400!important;line-height:1.3;letter-spacing:-.14px}
+.about-page .storyboard-body{font-size:18px;line-height:1.55}
+.about-page .history-closing{min-height:424px;padding:144px 76px}
+.about-page .history-closing h2{max-width:806px;font-size:48px;font-weight:350!important;line-height:1.15;letter-spacing:-.72px}
+.about-page .history-closing h2 span{color:#6ce86f}
+@media(min-width:1024px) and (max-width:1250px){.about-page .group-copy{left:56px;top:238px;width:560px}.about-page .group-copy h1{font-size:30px!important}.about-page .storyboard-heading h2{font-size:32px}.about-page .storyboard-copy h3{font-size:24px}.about-page .storyboard-body{font-size:17px}.about-page .history-closing{min-height:390px;padding:112px 64px}.about-page .history-closing h2{font-size:42px;max-width:760px}}
+@media(min-width:768px) and (max-width:1023px){.about-page .group-hero{height:590px;min-height:590px}.about-page .group-copy{left:40px;top:210px;width:52%;max-width:none}.about-page .group-copy h1{font-size:26px!important}.about-page .group-map-crop .group-map{left:2%;top:-72%;width:115%;height:auto;object-fit:contain}.about-page .storyboard-stage{grid-template-columns:repeat(2,minmax(0,1fr))}.about-page .storyboard-heading h2{font-size:30px}.about-page .storyboard-copy h3{font-size:24px}.about-page .storyboard-body{font-size:17px}.about-page .history-closing{min-height:350px;padding:96px 48px}.about-page .history-closing h2{font-size:36px;max-width:680px}}
+@media(max-width:767px){.about-page .group-intro{margin:0 16px 16px;padding:0}.about-page .group-hero{height:610px;min-height:610px;padding:0}.about-page .group-copy{position:relative;left:auto;top:auto;width:auto;max-width:none;padding:40px 24px 0}.about-page .sarabia-group{margin-bottom:16px;transform:scale(.8)}.about-page .group-copy h1{max-width:520px;font-size:24px!important;line-height:1.35}.about-page .group-map-crop{inset:auto 0 0;height:340px}.about-page .group-map-crop .group-map{left:-35%;top:-66%;width:170%;height:auto;object-fit:contain}.about-page .brand-marquee{height:148px}.about-page .brand-marquee .group-brands{min-height:148px}.about-page .storyboard-scroll{padding:32px 16px 48px}.about-page .storyboard-stage{grid-template-columns:1fr;gap:48px}.about-page .storyboard-heading h2{font-size:28px}.about-page .storyboard-copy h3{font-size:24px}.about-page .storyboard-body{font-size:17px}.about-page .history-closing{min-height:300px;padding:72px 24px}.about-page .history-closing h2{font-size:30px;line-height:1.18}}
+@media(max-width:480px){.about-page .group-hero{height:570px;min-height:570px}.about-page .group-copy{padding:32px 20px 0}.about-page .group-copy h1{font-size:22px!important}.about-page .group-map-crop{height:310px}.about-page .group-map-crop .group-map{left:-45%;top:-52%;width:190%}.about-page .storyboard-heading h2{font-size:26px}.about-page .storyboard-copy h3{font-size:22px}.about-page .storyboard-body{font-size:16px}.about-page .history-closing h2{font-size:28px}}
+
+/* Cards da história — espaçamentos do Figma 1309:1387. */
+.about-page .storyboard-scroll{padding:48px 0 24px}
+.about-page .storyboard-heading{margin:0;padding:0 24px}
+.about-page .storyboard-stage{padding:16px 56px 48px;gap:16px}
+.about-page .storyboard-copy{margin-top:24px}
+.about-page .storyboard-eyebrow{margin:0 0 4px}
+.about-page .storyboard-copy h3{margin:0 0 16px}
+.about-page .storyboard-body p{margin:0 0 24px}
+.about-page .storyboard-body p:last-child{margin-bottom:0}
+@media(min-width:768px) and (max-width:1023px){.about-page .storyboard-stage{padding:16px 40px 48px;gap:16px}}
+@media(max-width:767px){.about-page .storyboard-scroll{padding:32px 0 16px}.about-page .storyboard-heading{padding:0 20px}.about-page .storyboard-stage{padding:16px 20px 40px;gap:40px}.about-page .storyboard-copy{margin-top:24px}}
+
+/* Título da história — Figma 1309:1382; imagens sem stroke. */
+.about-page .storyboard-scroll{padding-top:32px}
+.about-page .storyboard-heading{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin:0;padding:16px 62px}
+.about-page .storyboard-heading>p{margin:0;padding:0 2px}
+.about-page .storyboard-heading h2{margin:0;color:#0d160d;font-size:42px;font-weight:350!important;line-height:1.2;letter-spacing:-.42px}
+.about-page .storyboard-image{border:0}
+@media(min-width:1024px) and (max-width:1250px){.about-page .storyboard-heading h2{font-size:38px}}
+@media(min-width:768px) and (max-width:1023px){.about-page .storyboard-heading{padding:16px 46px}.about-page .storyboard-heading h2{font-size:34px}}
+@media(max-width:767px){.about-page .storyboard-scroll{padding-top:24px}.about-page .storyboard-heading{padding:16px 20px}.about-page .storyboard-heading h2{font-size:30px}}
+@media(max-width:480px){.about-page .storyboard-heading h2{font-size:28px}}
+
+/* Hero Somos — enquadramento e alturas fixas do Figma 1309:1327. */
+.about-page .group-hero,.about-page .group-map-crop{overflow:visible}
+@media(min-width:1440px){.about-page .group-hero{height:669px;min-height:669px}.about-page .group-copy{left:83px;top:267.5px;width:622px}.about-page .group-map-crop .group-map{left:7.23%;top:-118.47%;width:98.13%;height:auto}}
+@media(min-width:1280px) and (max-width:1439px){.about-page .group-hero{height:600px;min-height:600px}.about-page .group-copy{left:74px;top:240px;width:558px}.about-page .group-map-crop .group-map{left:7.23%;top:-118.47%;width:98.13%;height:auto}}
+@media(min-width:1200px) and (max-width:1279px){.about-page .group-hero{height:560px;min-height:560px}.about-page .group-copy{left:69px;top:224px;width:520px}.about-page .group-map-crop .group-map{left:7.23%;top:-118.47%;width:98.13%;height:auto}}
+@media(min-width:1024px) and (max-width:1199px){.about-page .group-hero{height:500px;min-height:500px}.about-page .group-copy{left:60px;top:200px;width:470px}.about-page .group-copy h1{font-size:28px!important}.about-page .group-map-crop .group-map{left:7.23%;top:-118.47%;width:98.13%;height:auto}}
+@media(min-width:768px) and (max-width:1023px){.about-page .group-hero{height:450px;min-height:450px}.about-page .group-copy{left:48px;top:174px;width:46%}.about-page .group-copy h1{font-size:25px!important}.about-page .group-map-crop .group-map{left:7.23%;top:-118.47%;width:98.13%;height:auto}}
+@media(max-width:767px){.about-page .group-hero{height:560px;min-height:560px;overflow:hidden}.about-page .group-map-crop{overflow:hidden}.about-page .group-map-crop .group-map{left:-35%;top:-66%;width:170%;height:auto}}
+@media(max-width:480px){.about-page .group-hero{height:520px;min-height:520px}.about-page .group-map-crop .group-map{left:-45%;top:-52%;width:190%;height:auto}}
+
+/* Hero e marcas da página Somos — composição exclusiva para mobile. */
+@media(max-width:767px){
+  .about-page .group-hero{height:560px;min-height:560px}
+  .about-page .group-map-crop{inset:0 0 auto;height:300px;overflow:hidden}
+  .about-page .group-map-crop .group-map{left:-24%;top:-77%;width:148%;height:auto}
+  .about-page .group-copy{position:absolute;left:0;top:300px;width:100%;padding:24px 20px 0}
+  .about-page .sarabia-group{width:123px;height:32px;margin-bottom:16px;transform:scale(.5714);transform-origin:left top}
+  .about-page .group-copy h1{font-size:22px!important;line-height:1.35}
+  .about-page .brand-marquee{height:116px}
+  .about-page .brand-marquee .group-brands{min-height:116px;padding:12px 0}
+  .about-page .brand-marquee .group-brands>div{min-height:80px;padding:0 16px;gap:8px}
+  .about-page .brand-marquee .group-brands>div:nth-child(1){width:170px;margin-right:16px}
+  .about-page .brand-marquee .group-brands>div:nth-child(2){width:170px;margin-right:16px}
+  .about-page .brand-marquee .group-brands>div:nth-child(3){width:200px;margin-right:16px}
+  .about-page .brand-marquee .group-brands>div:nth-child(4){width:260px;margin-right:16px}
+  .about-page .brand-marquee .group-brands>div:nth-child(5){width:220px}
+  .about-page .brand-marquee .group-brands>div:not(:last-child)::after{top:50%;height:40px;transform:translateY(-50%)}
+  .about-page .brand-marquee .brand-lockup,.about-page .brand-marquee .group-brands>div>img{transform:scale(.82);transform-origin:left center}
+  .about-page .brand-marquee .group-brands p{font-size:12px}
+}
+@media(max-width:480px){
+  .about-page .group-hero{height:520px;min-height:520px}
+  .about-page .group-map-crop{height:270px}
+  .about-page .group-map-crop .group-map{left:-32%;top:-67%;width:164%}
+  .about-page .group-copy{top:270px;padding-top:20px}
+  .about-page .group-copy h1{font-size:20px!important}
+}
+
+/* Retângulo e mapa do hero — composição mobile do Figma 1307:16284. */
+@media(max-width:767px){
+  .about-page .group-intro{margin:0 8px 16px;padding:8px 0;border-width:1px;border-radius:12px}
+  .about-page .group-hero{height:470px;min-height:470px}
+  .about-page .group-map-crop{inset:0 0 auto;height:341px;overflow:hidden}
+  .about-page .group-map-crop .group-map{left:-35.06%;top:-86.78%;width:139.02%;height:auto}
+}
+@media(max-width:480px){
+  .about-page .group-hero{height:440px;min-height:440px}
+  .about-page .group-map-crop{height:341px}
+  .about-page .group-map-crop .group-map{left:-35.06%;top:-86.78%;width:139.02%;height:auto}
+}
+
+/* Restaura a composição Figma do hero em tablet e desktop; mobile permanece isolado. */
+@media(min-width:768px){
+  .about-page .group-intro{margin:0 24px 24px;padding:16px 0;border-width:1px;border-radius:24px}
+  .about-page .group-hero,.about-page .group-map-crop{overflow:visible}
+  .about-page .brand-marquee{height:164px;margin-top:0}
+  .about-page .brand-marquee .group-brands{min-height:164px;padding:24px 0}
+}
+@media(min-width:1280px){
+  .about-page .group-hero{height:669px;min-height:669px}
+  .about-page .group-copy{left:83px;top:267.5px;width:622px;max-width:calc(100% - 166px)}
+  .about-page .group-copy h1{font-size:32px!important}
+  .about-page .group-map-crop .group-map{left:7.23%;top:-118.47%;width:98.13%;height:auto}
+}
+@media(min-width:1024px) and (max-width:1279px){
+  .about-page .group-hero{height:600px;min-height:600px}
+  .about-page .group-copy{left:56px;top:220px;width:540px;max-width:calc(100% - 112px)}
+  .about-page .group-copy h1{font-size:30px!important}
+  .about-page .group-map-crop .group-map{left:5%;top:-108%;width:104%;height:auto}
+}
+@media(min-width:768px) and (max-width:1023px){
+  .about-page .group-hero{height:540px;min-height:540px}
+  .about-page .group-copy{left:40px;top:185px;width:52%;max-width:none}
+  .about-page .group-copy h1{font-size:26px!important}
+  .about-page .group-map-crop .group-map{left:0;top:-86%;width:120%;height:auto}
+}
+
+/* Desktop e tablet fluidos — proporção original 1390 × 669 do Figma 1309:1328. */
+@media(min-width:768px){
+  .about-page{overflow-x:clip}
+  .about-page .group-hero{width:100%;height:clamp(450px,48.13cqw,669px);min-height:clamp(450px,48.13cqw,669px)}
+  .about-page .group-copy{left:5.971%;top:39.985%;width:44.775%;max-width:none}
+  .about-page .group-copy h1{max-width:none;font-size:clamp(26px,2.3cqw,32px)!important;line-height:1.3;letter-spacing:-.16px}
+  .about-page .group-map-crop .group-map{left:7.23%;top:-118.47%;width:98.13%;height:auto;max-width:none;aspect-ratio:1262.12/1314.79;object-fit:contain}
+}
+
+/* Hero desktop/tablet — mantém a base do mapa acima das marcas e o respiro entre seções. */
+@media(min-width:768px){
+  .about-page{margin-top:-16px}
+  .about-page .group-intro{margin-bottom:32px}
+  .about-page .group-map-crop{overflow:hidden;clip-path:none}
+  .about-page .group-map-crop .group-map{
+    /* A base fica a 6,1% do fim do hero, como no frame de 1440px do Figma. */
+    top:calc(93.9% - 102.08cqw);
+  }
+  .about-page .storyboard-scroll{padding-top:0}
+}
+
 /* Hero compartilhado das páginas de Transparência — corte do Figma 880:10619. */
 .transparency-banner{position:relative}.transparency-banner img{transform:none}
 @media(min-width:651px){.transparency-banner img{position:absolute;left:0;top:-101.53%;width:100%;height:261.14%;max-width:none;object-fit:fill}}
@@ -165,3 +318,162 @@ footer{padding-top:88px}
 /* Contato: cópia do e-mail com confirmação discreta. */
 .contact-copy{margin:0;padding:0;border:0;background:transparent;font:inherit;line-height:1.15;text-align:left;cursor:pointer}.contact-copy:hover{color:#dfffe0}.copy-toast{position:absolute;right:32px;bottom:32px;border:1px solid #3b6940;border-radius:999px;background:#edfced;color:#0b220c;padding:10px 14px;font-size:14px;line-height:1.2;box-shadow:0 8px 24px rgba(0,0,0,.18)}
 @media(max-width:767px){.copy-toast{right:24px;bottom:24px}}
+
+/* Grid mestre — 1440px no desktop; o breakpoint mobile existente segue inalterado. */
+@media(min-width:768px){
+  .header,
+  main{
+    width:1440px;
+    max-width:100%;
+  }
+
+  /* Somos: o painel do mapa reproduz o frame interno de 1390 × 669px do Figma. */
+  .about-page{
+    margin-top:0;
+    overflow-x:clip;
+  }
+  .about-page .group-intro{
+    margin:0 24px 24px;
+    padding:0;
+    overflow:hidden;
+  }
+  .about-page .group-hero{
+    width:100%;
+    height:669px;
+    min-height:669px;
+  }
+  .about-page .group-map-crop{
+    overflow:hidden;
+  }
+  .about-page .group-map-crop .group-map{
+    left:7.23%;
+    top:-118.47%;
+    width:98.13%;
+    height:auto;
+  }
+  .about-page .group-copy{
+    left:83px;
+    top:267.5px;
+    width:622px;
+    max-width:calc(100% - 166px);
+  }
+  .about-page .group-copy h1{
+    font-size:32px!important;
+  }
+  .about-page .brand-marquee{
+    height:164px;
+    margin-top:0;
+  }
+  .about-page .brand-marquee .group-brands{
+    min-height:164px;
+    padding:0;
+  }
+}
+
+/* No primeiro viewport desktop, deixa uma barra de respiro antes da próxima seção. */
+@media(min-width:1200px){
+  .about-page .group-intro{
+    margin-bottom:32px;
+  }
+  .about-page .group-hero{
+    height:min(669px,max(450px,calc(100dvh - 305px)));
+    min-height:min(669px,max(450px,calc(100dvh - 305px)));
+  }
+}
+@media(min-width:768px) and (max-width:1199px){
+  .about-page .group-intro{
+    margin-bottom:32px;
+  }
+  .about-page .group-hero{
+    height:min(669px,max(450px,calc(100dvh - 289px)));
+    min-height:min(669px,max(450px,calc(100dvh - 289px)));
+  }
+}
+
+/* Alinha a área verde à coluna direita, como no frame Figma 1309:1354. */
+@media(min-width:768px){
+  .about-page .group-map-crop .group-map{
+    /* O centro da área verde cai em 75,3% × 38,3% do hero. */
+    left:75.3%;
+    top:38.3%;
+    width:98.13%;
+    height:auto;
+    transform:translate(-69.45%,-73.83%);
+  }
+}
+
+@media(max-width:767px){
+  .about-page .group-intro{
+    padding-top:0;
+  }
+}
+
+/* Novo mapa — composição de desktop do Figma 1309:1298. */
+@media(min-width:768px){
+  .about-page .group-map-crop .group-map{
+    left:37.68%;
+    top:-17.55%;
+    width:53.29%;
+    height:auto;
+    transform:none;
+    object-fit:contain;
+  }
+}
+@media(min-width:1280px){
+  .about-page .group-copy{
+    left:83px;
+    top:256.05px;
+    width:622px;
+  }
+}
+@media(min-width:768px) and (max-width:1279px){
+  .about-page .group-copy{
+    left:5.97%;
+    top:38.27%;
+    width:44.77%;
+    max-width:none;
+  }
+}
+
+/* Home: aproxima o conteúdo do topo em 16px nas larguras não mobile. */
+@media(min-width:768px){
+  .hero{
+    padding-top:144px;
+  }
+  .hero-description{
+    padding-top:16px;
+  }
+}
+
+/* O mesmo export america_do_sul é usado em todos os breakpoints. */
+@media(max-width:767px){
+  .about-page .group-map-crop .group-map{
+    left:-35.06%;
+    top:-86.78%;
+    width:139.02%;
+    height:auto;
+    transform:none;
+    object-fit:contain;
+  }
+}
+
+/* Tablet: mantém a composição em duas colunas, dando mais presença ao mapa. */
+@media(min-width:768px) and (max-width:1279px){
+  .about-page .group-map-crop .group-map{
+    left:37.68%;
+    top:-17.55%;
+    width:62%;
+    height:auto;
+  }
+  .about-page .group-copy{
+    width:42%;
+  }
+  .about-page .sarabia-group{
+    transform:scale(.88);
+    transform-origin:left top;
+    margin-bottom:8px;
+  }
+  .about-page .group-copy h1{
+    font-size:28px!important;
+  }
+}
