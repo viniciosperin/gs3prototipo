@@ -445,12 +445,11 @@ footer{padding-top:88px}
   }
 }
 
-/* Home: foto monocromática com uma sobreposição verde leve, como no Figma. */
-.history{isolation:isolate}
-.history-background{z-index:0;opacity:1;filter:grayscale(1)}
-.history::before{content:"";position:absolute;inset:0;z-index:1;background:#063708;opacity:.2;pointer-events:none}
-.history-curve{z-index:1}
-.history-content{z-index:2}
+/* Home: composição original do Figma — fundo verde e foto translúcida. */
+.history{isolation:auto}
+.history-background{z-index:auto;opacity:.2;filter:none}
+.history::before{content:none}
+.history-curve,.history-content{z-index:auto}
 
 /* O mesmo export america_do_sul é usado em todos os breakpoints. */
 @media(max-width:767px){
