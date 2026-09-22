@@ -451,6 +451,12 @@ footer{padding-top:88px}
 .history::before{content:none}
 .history-curve,.history-content{z-index:auto}
 
+/* Tipografia display: todos os títulos seguem o peso regular 400. */
+h1,h2,h3,h4,h5,h6,.services-title,
+h1 span,h2 span,h3 span,h4 span,h5 span,h6 span{
+  font-weight:400!important;
+}
+
 /* O mesmo export america_do_sul é usado em todos os breakpoints. */
 @media(max-width:767px){
   .about-page .group-map-crop .group-map{
