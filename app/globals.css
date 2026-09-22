@@ -94,6 +94,11 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 .about-page .social-brand.sieg{background-image:url('/assets/history-imgMaskGroupBackground.png');background-size:69.699px 34.486px;filter:brightness(0) saturate(100%) invert(38%) sepia(14%) saturate(1625%) hue-rotate(61deg) brightness(92%) contrast(89%)}
 .about-page .social-brand.foundation{background-image:url('/assets/history-imgFoundationBackground.png');background-size:107.027px 33.703px;filter:brightness(0) saturate(100%) invert(71%) sepia(30%) saturate(840%) hue-rotate(41deg) brightness(88%) contrast(86%)}
 
+/* Logos sociais como imagens: evita dependência de suporte a CSS mask no navegador. */
+.about-page .brand-marquee .social-logo{display:block;flex:0 0 auto;object-fit:contain;max-width:none}
+.about-page .brand-marquee .social-logo-sieg{width:72.976px;height:39.946px;filter:brightness(0) saturate(100%) invert(38%) sepia(14%) saturate(1625%) hue-rotate(61deg) brightness(92%) contrast(89%)}
+.about-page .brand-marquee .social-logo-foundation{width:107.026px;height:40.649px;filter:brightness(0) saturate(100%) invert(71%) sepia(30%) saturate(840%) hue-rotate(41deg) brightness(88%) contrast(86%)}
+
 .modal-close{transition:none}.modal-close:hover,.modal-close:active{background:#fff}.modal-close img{transform:none;transition:filter .2s ease}.modal-close:hover img{transform:none;filter:brightness(.72)}.modal-close:active img{transform:none;filter:brightness(.42)}
 
 /* Figma 1062:1083 — button interaction states. */
