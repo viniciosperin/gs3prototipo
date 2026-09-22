@@ -89,6 +89,11 @@ button{font:inherit;cursor:pointer}.action{background:transparent}.action-filled
 .about-page .social-brand.sieg{width:72.976px;height:39.946px;background:#417131;-webkit-mask-image:url('/assets/history-imgMaskGroupBackground.png');mask-image:url('/assets/history-imgMaskGroupBackground.png');-webkit-mask-size:69.699px 34.486px;mask-size:69.699px 34.486px;-webkit-mask-position:1.73px 1.456px;mask-position:1.73px 1.456px}
 .about-page .social-brand.foundation{width:107.026px;height:40.649px;background:#87b838;-webkit-mask-image:url('/assets/history-imgFoundationBackground.png');mask-image:url('/assets/history-imgFoundationBackground.png');-webkit-mask-size:107.027px 33.703px;mask-size:107.027px 33.703px;-webkit-mask-position:0 2.187px;mask-position:0 2.187px}
 
+/* Fallback visível: os PNGs originais do Figma preservam a transparência do logo. */
+.about-page .social-brand{background-color:transparent!important;-webkit-mask-image:none!important;mask-image:none!important;background-repeat:no-repeat;background-position:center}
+.about-page .social-brand.sieg{background-image:url('/assets/history-imgMaskGroupBackground.png');background-size:69.699px 34.486px;filter:brightness(0) saturate(100%) invert(38%) sepia(14%) saturate(1625%) hue-rotate(61deg) brightness(92%) contrast(89%)}
+.about-page .social-brand.foundation{background-image:url('/assets/history-imgFoundationBackground.png');background-size:107.027px 33.703px;filter:brightness(0) saturate(100%) invert(71%) sepia(30%) saturate(840%) hue-rotate(41deg) brightness(88%) contrast(86%)}
+
 .modal-close{transition:none}.modal-close:hover,.modal-close:active{background:#fff}.modal-close img{transform:none;transition:filter .2s ease}.modal-close:hover img{transform:none;filter:brightness(.72)}.modal-close:active img{transform:none;filter:brightness(.42)}
 
 /* Figma 1062:1083 — button interaction states. */
