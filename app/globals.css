@@ -334,6 +334,22 @@ footer{padding-top:88px}
 .contact-copy{margin:0;padding:0;border:0;background:transparent;font:inherit;line-height:1.15;text-align:left;cursor:pointer}.contact-copy:hover{color:#dfffe0}.copy-toast{position:absolute;right:32px;bottom:32px;border:1px solid #3b6940;border-radius:999px;background:#edfced;color:#0b220c;padding:10px 14px;font-size:14px;line-height:1.2;box-shadow:0 8px 24px rgba(0,0,0,.18)}
 @media(max-width:767px){.copy-toast{right:24px;bottom:24px}}
 
+/* Header compartilhado conforme o Figma 1174:23682. */
+.header{display:flex;align-items:center}
+.header-inner{display:flex;width:min(100%,1225px);align-items:center;justify-content:space-between;gap:24px}
+.header-brand{display:block;flex:0 0 auto}
+.header-brand img{width:111.359px;height:27.499px;max-width:none}
+.header-nav{display:flex;align-items:center;gap:24px}
+.header-nav a,.header-nav-link{color:#777;font-family:inherit;font-size:20px;font-weight:500;line-height:20px;letter-spacing:-.2px;white-space:nowrap;transition:color .18s ease}
+.header-nav-link{padding:0;border:0;background:none;cursor:pointer}
+.header-nav a:hover,.header-nav-link:hover{color:#18c11f}
+@media(max-width:767px){
+  .header-inner{gap:8px}
+  .header-brand img{width:78px;height:auto}
+  .header-nav{gap:8px}
+  .header-nav a,.header-nav-link{font-size:12px;line-height:16px;letter-spacing:-.12px}
+}
+
 /* Grid mestre — 1440px no desktop; o breakpoint mobile existente segue inalterado. */
 @media(min-width:768px){
   .header,

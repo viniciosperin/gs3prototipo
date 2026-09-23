@@ -2,7 +2,7 @@
   "riesgos": {
     "title": "Política de Gestión de Riesgos Integrales",
     "intro": [
-      "GS3 S.A. gestiona de forma integrada todos los riesgos inherentes a su actividad como OCD y PSP. La gestión de riesgos es una responsabilidad compartida por el Directorio, la Gerencia General y el Oficial de Cumplimiento, bajo un enfoque de tres líneas de defensa."
+      "GS3 S.A. gestiona de forma integrada todos los riesgos inherentes a su actividad como OCD. La gestión de riesgos es una responsabilidad compartida por el Directorio, la Gerencia General y el Oficial de Cumplimiento, bajo un enfoque de tres líneas de defensa."
     ],
     "sections": [
       {
@@ -42,8 +42,7 @@
           "Análisis integral de la capacidad de pago del solicitante, basado en información verdadera y verificable.",
           "Debida diligencia KYC (Conozca a su Cliente) con verificación de identidad, beneficiario final y cumplimiento ALA/FT.",
           "Consulta obligatoria a burós de crédito (Informconf) y referencias comerciales.",
-          "Uso de scoring propietario con consentimiento expreso del cliente — Ley N.° 7593/2025.",
-          "Toda aprobación se documenta en acta del Comité de Crédito conforme a la Res. N.° 16/2022 BCP."
+          "Uso de scoring propietario con consentimiento expreso del cliente — Ley N.° 7593/2025."
         ]
       },
       {
@@ -66,13 +65,13 @@
         "paragraphs": [
           "Datos de identificación: nombre, cédula de identidad, RUC, domicilio, teléfono y correo electrónico.",
           "Datos financieros: historial crediticio, información patrimonial y de ingresos, necesarios para la evaluación de crédito.",
-          "Datos de uso de la plataforma: interacciones con la app GS3 y el sistema de pagos PSP."
+          "Datos de uso de la plataforma: interacciones con la app GS3."
         ]
       },
       {
         "title": "¿Para qué usamos sus datos?",
         "paragraphs": [
-          "Evaluación de solicitudes de crédito mediante scoring propietario.",
+          "Evaluación de solicitudes de crédito mediante scoring crediticio.",
           "Gestión de la relación contractual (desembolsos, cobros, comunicaciones).",
           "Cumplimiento de obligaciones regulatorias ante el BCP, SEPRELAD y otras autoridades.",
           "Prevención del lavado de activos y financiamiento del terrorismo (ALA/FT)."
@@ -81,13 +80,13 @@
       {
         "title": "Sus derechos",
         "paragraphs": [
-          "Conforme a la Ley N.° 7593/2025, usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales (derechos ARCO). Para ejercer estos derechos, contacte a nuestro Oficial de Protección de Datos (DPO) a través del formulario de contacto disponible en este sitio."
+          "Conforme a la Ley N.° 7593/2025, usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales (derechos ARCO). Para ejercer estos derechos, utilice el formulario de contacto disponible en este sitio."
         ]
       },
       {
         "title": "Consentimiento",
         "paragraphs": [
-          "GS3 solicita consentimiento expreso antes de utilizar sus datos en procesos de scoring crediticio automatizado. Sin este consentimiento, no es posible procesar su solicitud de crédito."
+          "GS3 solicita consentimiento expreso antes de utilizar sus datos en procesos de scoring crediticio. Sin este consentimiento, no es posible procesar su solicitud de crédito."
         ]
       }
     ]
@@ -118,9 +117,9 @@
     ]
   },
   "pld-ft": {
-    "title": "Política de Prevención de Lavado de Dinero y Financiamiento del Terrorismo (PLD/FT)",
+    "title": "Política de PLD/FT",
     "intro": [
-      "GS3 S.A. tiene el compromiso firme de no ser utilizada — directa ni indirectamente — para el lavado de activos, el financiamiento del terrorismo ni la proliferación de armas (ALA/FT/FP). Como entidad regulada por el BCP y sujeta a la supervisión de SEPRELAD, GS3 aplica un Programa de Cumplimiento ALA/FT/FP robusto y actualizado."
+      "La Política de Prevención de Lavado de Dinero y Financiamiento del Terrorismo establece el compromiso firme de GS3 S.A. de no ser utilizada — directa ni indirectamente — para el lavado de activos, el financiamiento del terrorismo ni la proliferación de armas (ALA/FT/FP). Como entidad regulada por el BCP y sujeta a la supervisión de SEPRELAD, GS3 aplica un Programa de Cumplimiento ALA/FT/FP robusto y actualizado."
     ],
     "sections": [
       {
@@ -145,8 +144,7 @@
   "tasas": {
     "title": "Tasas",
     "intro": [
-      "Conforme a la Resolución N.° 30/2022 del Banco Central del Paraguay y a la Resolución N.° 23/2023 BCP sobre tasas de interés, GS3 S.A. publica mensualmente en este sitio web el Tarifario con las tasas de interés vigentes para cada uno de sus productos financieros.",
-      "Las tasas se expresan en términos anuales (TNA y TEA) e incluyen el detalle de comisiones y cargos aplicables. GS3 se compromete a mantener las tasas dentro de los límites máximos establecidos por el BCP y a informar cualquier modificación con antelación razonable."
+      "Conforme a la Resolución N.° 30/2022 del Banco Central del Paraguay y a la Resolución N.° 23/2023 BCP sobre tasas de interés, GS3 S.A. publica mensualmente en este sitio web el Tarifario con las tasas de interés vigentes para cada uno de sus productos financieros."
     ],
     "sections": []
   }

@@ -1,4 +1,5 @@
 import { SiteFooter } from '@/components/site-footer';
+import { SiteHeader } from '@/components/site-header';
 import { ServicesModal } from '@/components/services-modal';
 const A = '/assets/';
 function Action({ href, children, filled = false }: { href: string; children: React.ReactNode; filled?: boolean }) {
@@ -7,7 +8,7 @@ function Action({ href, children, filled = false }: { href: string; children: Re
 export default function Home() {
   return <>
     <a className="skip-link" href="#contenido">Saltar al contenido</a>
-    <header className="header"><a href="#" aria-label="GS3 — Inicio"><img src={`${A}logo.svg`} width="112" height="28" alt="GS3" /></a></header>
+    <SiteHeader />
     <main id="contenido">
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy"><h1 id="hero-title"><span>Mucho más que crédito.</span> Un aliado del productor</h1><div className="hero-description"><p>Conocemos el agro desde adentro. Por eso, entendemos sus ciclos, sus desafíos y las decisiones que mueven el campo.</p><ServicesModal /></div></div>
