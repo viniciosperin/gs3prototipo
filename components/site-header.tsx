@@ -3,13 +3,14 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { ContactModal } from '@/components/contact-modal';
 import { ServicesModal } from '@/components/services-modal';
 
 const navigation = [
   { label: 'Home', href: '/' },
   { label: 'Somos', href: '/historia' },
   { label: 'Servicios' },
-  { label: 'Contacto', href: '/transparencia/denuncias' },
+  { label: 'Contacto' },
 ];
 
 export function SiteHeader() {
@@ -28,6 +29,8 @@ export function SiteHeader() {
           {navigation.map(({ label, href }) => (
             label === 'Servicios'
               ? <ServicesModal key={label} triggerLabel={label} triggerClassName="header-nav-link" showTriggerArrow={false} onTriggerClick={() => setMenuOpen(false)} />
+              : label === 'Contacto'
+                ? <ContactModal key={label} onTriggerClick={() => setMenuOpen(false)} />
               : <Link key={label} href={href!} onClick={() => setMenuOpen(false)}>{label}</Link>
           ))}
         </nav>
