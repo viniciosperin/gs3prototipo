@@ -334,6 +334,33 @@ footer{padding-top:88px}
 .contact-copy{margin:0;padding:0;border:0;background:transparent;font:inherit;line-height:1.15;text-align:left;cursor:pointer}.contact-copy:hover{color:#dfffe0}.copy-toast{position:absolute;right:32px;bottom:32px;border:1px solid #3b6940;border-radius:999px;background:#edfced;color:#0b220c;padding:10px 14px;font-size:14px;line-height:1.2;box-shadow:0 8px 24px rgba(0,0,0,.18)}
 @media(max-width:767px){.copy-toast{right:24px;bottom:24px}}
 
+/* Normativos — Figma 1342:2841 */
+.normative-page .transparency-banner{position:relative}
+.normative-page .transparency-banner img{position:absolute;top:-101.53%;left:0;height:261.14%;max-width:none;object-fit:cover;object-position:center;transform:none}
+.normative-page .normative-heading{display:flex;align-items:flex-start;flex-direction:column;gap:12px;margin-bottom:24px;text-align:left}
+.normative-page .normative-heading .eyebrow{margin-bottom:0}
+.normative-page .normative-heading h1{width:100%;font-size:68px;font-weight:350!important;line-height:1.1;letter-spacing:-1.36px;text-align:left}
+.normative-page .normative-documents{margin-top:32px}
+.normative-page .documents-heading h2{font-size:24px;line-height:1;letter-spacing:-.12px}
+.normative-year{display:flex;align-items:center;gap:8px;color:#5e6f5e;font-size:18px;font-weight:600;line-height:1.4;white-space:nowrap}
+.normative-year-select{display:inline-flex;align-items:center;gap:4px;color:#0d160d}
+.normative-year-select select{width:52px;appearance:none;border:0;padding:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.normative-year-select img{display:block;flex:none}
+.normative-page .normative-document-row{flex-wrap:nowrap}
+@media(max-width:1100px){.normative-page .normative-heading h1{font-size:54px;letter-spacing:-1.08px}}
+@media(max-width:650px){.normative-page .normative-heading{gap:8px;margin-bottom:20px}.normative-page .normative-heading h1{font-size:40px;letter-spacing:-.8px}.normative-page .normative-documents{margin-top:24px}.normative-page .documents{padding:24px}.normative-page .documents-heading{align-items:center}.normative-page .normative-document-row{padding:16px;gap:12px}.normative-page .document-content>span{font-size:16px;line-height:1.3}.normative-page .document-content small{font-size:12px}}
+
+/* Gestión de Reclames — Figma 1342:2448 */
+.claims-page .transparency-banner{position:relative}
+.claims-page .transparency-banner img{position:absolute;top:-101.53%;left:0;height:261.14%;max-width:none;object-fit:cover;object-position:center;transform:none}
+.claims-page .page-heading{display:flex;align-items:flex-start;flex-direction:column;gap:12px;margin-bottom:32px;text-align:left}
+.claims-page .page-heading .eyebrow{margin:0}
+.claims-page .page-heading h1{width:100%;font-size:68px;font-weight:350!important;line-height:1.1;letter-spacing:-1.36px;text-align:left}
+.claims-page .claims-intro{font-size:24px;line-height:1.5;letter-spacing:-.12px}
+.claims-page .documents{margin-top:32px}
+@media(max-width:1100px){.claims-page .page-heading h1{font-size:54px;letter-spacing:-1.08px}}
+@media(max-width:650px){.claims-page .page-heading{gap:8px;margin-bottom:24px}.claims-page .page-heading h1{font-size:40px;letter-spacing:-.8px}.claims-page .claims-intro{font-size:19px}.claims-page .documents{margin-top:24px}}
+
 /* Header compartilhado conforme o Figma 1174:23682. */
 .header{display:flex;align-items:center}
 .header-inner{display:flex;width:min(100%,1225px);align-items:center;justify-content:space-between;gap:24px}
@@ -343,12 +370,21 @@ footer{padding-top:88px}
 .header-nav a,.header-nav-link{color:#777;font-family:inherit;font-size:20px;font-weight:500;line-height:20px;letter-spacing:-.2px;white-space:nowrap;transition:color .18s ease}
 .header-nav-link{padding:0;border:0;background:none;cursor:pointer}
 .header-nav a:hover,.header-nav-link:hover{color:#18c11f}
+.header-menu-toggle{display:none}
 @media(max-width:767px){
+  .header{position:relative;z-index:30}
   .header-inner{gap:8px}
   .header-brand img{width:78px;height:auto}
-  .header-nav{gap:8px}
-  .header-nav a,.header-nav-link{font-size:12px;line-height:16px;letter-spacing:-.12px}
+  .header-menu-toggle{display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;margin-left:auto;padding:0;border:1px solid #dde3dd;border-radius:12px;background:#f9faf9;color:#0d160d;cursor:pointer}
+  .header-menu-toggle svg{width:24px;height:24px;stroke-width:1.8}
+  .header-menu-toggle:focus-visible{outline:3px solid #18c11f;outline-offset:3px}
+  .header-nav{display:none;position:absolute;z-index:40;top:calc(100% - 12px);left:24px;right:24px;align-items:stretch;flex-direction:column;gap:4px;padding:12px;border:1px solid #dde3dd;border-radius:16px;background:#f9faf9;box-shadow:0 12px 32px rgba(13,22,13,.14)}
+  .header-nav[data-open="true"]{display:flex;animation:mobile-nav-expand .18s ease-out both}
+  .header-nav a,.header-nav-link{display:block;width:100%;padding:12px 14px;border-radius:8px;text-align:left;font-size:18px;line-height:1.2;letter-spacing:-.18px}
+  .header-nav a:hover,.header-nav-link:hover{background:#f0f3f0}
 }
+@keyframes mobile-nav-expand{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.header-nav[data-open="true"]{animation:none}}
 
 /* Grid mestre — 1440px no desktop; o breakpoint mobile existente segue inalterado. */
 @media(min-width:768px){

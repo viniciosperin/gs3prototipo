@@ -8,9 +8,9 @@ const services = [
   ['Anticipo de facturas', 'Con el anticipo de facturas, GS3 te adelantamos el importe de tus facturas por cobrar y transformás tu crédito comercial en capital disponible hoy.', '/assets/file-text-fill.svg'],
 ];
 
-export function ServicesModal({ triggerLabel = 'Nuestros Servicios', triggerClassName = 'action', showTriggerArrow = true }: { triggerLabel?: string; triggerClassName?: string; showTriggerArrow?: boolean }) {
+export function ServicesModal({ triggerLabel = 'Nuestros Servicios', triggerClassName = 'action', showTriggerArrow = true, onTriggerClick }: { triggerLabel?: string; triggerClassName?: string; showTriggerArrow?: boolean; onTriggerClick?: () => void }) {
   return <Dialog>
-    <DialogTrigger asChild><button className={triggerClassName} type="button">{triggerLabel}{showTriggerArrow&&<img src="/assets/arrow-green.svg" width="20" height="20" alt="" />}</button></DialogTrigger>
+    <DialogTrigger asChild><button className={triggerClassName} type="button" onClick={onTriggerClick}>{triggerLabel}{showTriggerArrow&&<img src="/assets/arrow-green.svg" width="20" height="20" alt="" />}</button></DialogTrigger>
     <DialogContent className="services-modal" showCloseButton={false}>
       <div className="services-heading">
         <DialogClose className="modal-close" aria-label="Cerrar servicios"><img src="/assets/modal-close.svg" width="24" height="24" alt="" /></DialogClose>

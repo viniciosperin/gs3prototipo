@@ -1,9 +1,15 @@
+import Link from 'next/link';
 import text from '@/lib/extra-content.json';
 
 export function ReportsContent(){
  const a=text.reports;
  return <><section className="management"><h2>{a[2]}</h2><p>{a[3]}</p><p>{a[5]}</p><div className="people-grid directors">{[[a[6],a[7]],[a[8],a[9]],[a[10],a[11]]].map(([role,name])=><article key={name}><span>{role}</span><h3>{name}</h3></article>)}</div></section><section className="management"><h2>{a[12]}</h2><p>{a[13]}</p><div className="people-grid">{[[a[14],a[15]],[a[16],a[17]],[a[18],a[19]],[a[20],a[21]]].map(([role,name])=><article key={name}><span>{role}</span><h3>{name}</h3></article>)}</div></section><div className="policy-sections">{[[a[22],a[23]],[a[24],a[25]]].map(([title,body])=><section className="policy-row" key={title}><h2>{title}</h2><p>{body}</p></section>)}</div><section className="principles"><h2>{a[26]}</h2><div className="principle-grid">{[[a[27],a[28]],[a[29],a[30]],[a[31],a[32]],[a[33],a[34]]].map(([title,body])=><article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div></section></>;
 }
+
+export function ClaimsManagementContent(){
+ return <div className="policy-intro claims-intro"><p>Nuestros canales de consulta y mecanismos de atención de sugerencias y reclamos, que nos permiten mejorar y satisfacer plenamente a nuestros clientes.</p></div>;
+}
+
 export function ComplaintsContent(){
  const a=text.complaints;
  const guarantees=[['shield','Confidencialidad','La identidad del denunciante será protegida.'],['anonymous','Anonimato','Es posible realizar denuncias de forma anónima.'],['voice','No represalia','Ningún denunciante sufrirá represalias por reportar una conducta indebida.'],['investigation','Investigación','Toda denuncia será investigada por el Comité de Ética.']];
