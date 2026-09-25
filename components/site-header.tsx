@@ -23,7 +23,10 @@ export function SiteHeader() {
           <img src="/assets/logo.svg" width="111.359" height="27.499" alt="GS3" />
         </Link>
         <button className="header-menu-toggle" type="button" aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={menuOpen} aria-controls="site-navigation" onClick={() => setMenuOpen(open => !open)}>
-          {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          <span className="header-menu-icons" data-open={menuOpen} aria-hidden="true">
+            <Menu className="menu-icon" />
+            <X className="close-icon" />
+          </span>
         </button>
         <nav className="header-nav" id="site-navigation" aria-label="Navegación principal" data-open={menuOpen}>
           {navigation.map(({ label, href }) => (

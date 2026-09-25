@@ -15,7 +15,7 @@ export default function Home() {
         <div className="hero-image"><video autoPlay muted loop playsInline preload="metadata" aria-label="Cosecha en el campo"><source src={`${A}home-hero.mp4`} type="video/mp4" /></video></div>
       </section>
       <section className="solutions" id="servicios" aria-labelledby="solutions-title">
-        <h2 id="solutions-title">Soluciones financieras<br /><span>con los valores del campo,</span><br />para cada etapa del ciclo productivo.</h2>
+        <h2 id="solutions-title">Soluciones financieras<br />{" "}<span>con los valores del campo,</span>{" "}<br />para cada etapa del ciclo productivo.</h2>
         <div className="service-row"><div className="landscape-image"><img src={`${A}home-service-main.png`} alt="Cosecha de la zafra al atardecer" loading="lazy" /></div><div className="service-copy"><h3>Del crédito al financiamiento de la zafra</h3><p>Soluciones financieras para responder a las necesidades de tu producción, desde la planificación hasta el cierre de la campaña.</p><ServicesModal /></div></div>
         <div className="values"><article><div className="value-image"><img src={`${A}home-value-integrity.png`} alt="Productores trabajando durante la cosecha" loading="lazy" /></div><h3>Fe para actuar con integridad</h3><p>Tomamos cada decisión con responsabilidad, respeto y conciencia de su impacto.</p></article><article className="family-copy"><div className="value-image family-image"><img src={`${A}home-value-generations.png`} alt="Familia de productores junto a la cosechadora" loading="lazy" /></div><h3>Familia para valorar lo que realmente importa</h3><p>Construimos relaciones duraderas, basadas en la confianza, la cooperación y el compromiso con quienes nos rodean.</p></article></div>
       </section>
