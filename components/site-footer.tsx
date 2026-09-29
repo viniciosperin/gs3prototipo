@@ -5,7 +5,7 @@ import Link from 'next/link';
 const footerLinks: Record<string,string> = {'Gobierno Corporativo':'/transparencia/gobierno-corporativo','Política de Riesgos Integrales':'/transparencia/riesgos','Política de Crédito':'/transparencia/credito','Política de Privacidad':'/transparencia/privacidad','Código de Ética y Conducta':'/transparencia/etica','PLD/FT':'/transparencia/pld-ft','Canal de Denuncias':'/transparencia/denuncias','Tasas':'/transparencia/tasas','Gestión de Reclames':'/transparencia/gestion-reclames','Normativas':'/transparencia/normativas'};
 const socialLinks = [
   { name: 'Instagram', icon: 2, href: 'https://www.instagram.com/gs3.fintech/' },
-  { name: 'LinkedIn', icon: 4, href: 'https://www.linkedin.com/company/103188948/admin/dashboard/' },
+  { name: 'LinkedIn', icon: 4, href: 'https://www.linkedin.com/company/gs3-fintech' },
 ];
 export function SiteFooter() {
   const [copied, setCopied] = useState(false);
