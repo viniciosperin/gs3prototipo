@@ -768,3 +768,28 @@ button,[role="button"]{-webkit-user-select:none;user-select:none}
 
 /* Servicios: el stroke sutil del Figma se comparte entre las tres tarjetas. */
 .service-cards article{border-color:#f0f3f0}
+
+/* Gobierno Corporativo — estructura y proporciones del frame Figma 1342:2632. */
+.governance-page .page-heading{display:flex;flex-direction:column;align-items:flex-start;text-align:left;margin-bottom:48px}
+.governance-page .page-heading .eyebrow{width:100%;margin-bottom:12px}
+.governance-page .page-heading h1{font-size:68px;font-weight:350;line-height:1.1;letter-spacing:-1.36px}
+.governance-content{display:flex;flex-direction:column;gap:48px}
+.governance-overview{display:grid;gap:0;padding-bottom:64px;border-bottom:1px solid #dde3dd}
+.governance-row{display:grid;grid-template-columns:minmax(220px,275px) minmax(0,1fr);gap:56px;padding:32px 0}
+.governance-row h2{font-size:28px;font-weight:350;line-height:1.3;letter-spacing:-.14px}
+.governance-row p,.governance-management-copy{color:#576257;font-size:22px;line-height:1.55}
+.governance-principles{margin-top:16px}
+.governance-principles>h2,.governance-management>h2{font-size:28px;font-weight:350;line-height:1.3;margin-bottom:24px}
+.governance-principle-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.governance-principle-grid article{min-height:240px;padding:20px 24px;background:#fff;border:1px solid #f0f3f0;border-radius:12px}
+.governance-principle-grid h3{font-size:20px;font-weight:500;line-height:1.4;margin-bottom:12px}
+.governance-principle-grid p{font-size:18px;line-height:1.55;color:#576257}
+.governance-management-copy{margin:0 0 24px}
+.governance-management-copy p+p{margin-top:12px}
+.governance-people-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.governance-people-grid.governance-directors{grid-template-columns:repeat(3,minmax(0,1fr))}
+.governance-people-grid article{min-width:0;min-height:201px;padding:24px;background:#fff;border:1px solid #dde3dd;border-radius:12px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:32px}
+.governance-people-grid article span{border:1px solid #14841d;border-radius:999px;padding:5px 10px;color:#14841d;font-size:16px;font-weight:500;line-height:1.3}
+.governance-people-grid article h3{font-size:22px;font-weight:400;line-height:1.3}
+@media(max-width:1100px){.governance-page .page-heading h1{font-size:54px;letter-spacing:-1.08px}.governance-row{grid-template-columns:minmax(190px,240px) minmax(0,1fr);gap:32px}.governance-principle-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.governance-people-grid,.governance-people-grid.governance-directors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.governance-page .page-heading{align-items:flex-start;text-align:left;margin-bottom:28px}.governance-page .page-heading h1{font-size:40px;letter-spacing:-.8px}.governance-content{gap:36px}.governance-overview{padding-bottom:40px}.governance-row{grid-template-columns:1fr;gap:12px;padding:24px 0}.governance-row h2{font-size:24px}.governance-row p,.governance-management-copy{font-size:18px}.governance-principles{margin-top:16px}.governance-principles>h2,.governance-management>h2{font-size:24px;margin-bottom:16px}.governance-principle-grid,.governance-people-grid,.governance-people-grid.governance-directors{grid-template-columns:1fr}.governance-principle-grid article{min-height:0;padding:20px}.governance-people-grid article{min-height:160px;padding:20px}.governance-management-copy{margin-bottom:20px}}

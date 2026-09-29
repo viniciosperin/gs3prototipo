@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { ContactModal } from '@/components/contact-modal';
@@ -19,9 +18,9 @@ export function SiteHeader() {
   return (
     <header className="header" data-mobile-open={menuOpen}>
       <div className="header-inner">
-        <Link className="header-brand" href="/" aria-label="GS3 — Inicio" onClick={() => setMenuOpen(false)}>
+        <a className="header-brand" href="/" aria-label="GS3 — Inicio" onClick={() => setMenuOpen(false)}>
           <img src="/assets/logo.svg" width="111.359" height="27.499" alt="GS3" />
-        </Link>
+        </a>
         <button className="header-menu-toggle" type="button" aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={menuOpen} aria-controls="site-navigation" onClick={() => setMenuOpen(open => !open)}>
           <span className="header-menu-icons" data-open={menuOpen} aria-hidden="true">
             <Menu className="menu-icon" />
@@ -34,7 +33,7 @@ export function SiteHeader() {
               ? <ServicesModal key={label} triggerLabel={label} triggerClassName="header-nav-link" showTriggerArrow={false} onTriggerClick={() => setMenuOpen(false)} />
               : label === 'Contacto'
                 ? <ContactModal key={label} onTriggerClick={() => setMenuOpen(false)} />
-              : <Link key={label} href={href!} onClick={() => setMenuOpen(false)}>{label}</Link>
+              : <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
           ))}
         </nav>
       </div>
