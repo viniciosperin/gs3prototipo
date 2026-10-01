@@ -23,7 +23,6 @@ export function NormativeDocuments() {
     <div className="documents-heading">
       <h2 id="normative-documents-title">Documentos</h2>
     </div>
-    <p className="normative-note">Archivos originales publicados en el sitio de <a href="https://www.negofin.com.py/leyes-normativas-y-resoluciones-vigentes/" target="_blank" rel="noreferrer">Negofin</a>.</p>
     <div className="document-rows">
       {normativeDocuments.map(document => <a className="document-row normative-document-row" key={document.slug} href={`/documents/${document.slug}.pdf`} target="_blank" rel="noreferrer" aria-label={`Abrir resumen en PDF: ${document.title}`}>
         <span className="document-pdf"><img src="/assets/doc-pdf.svg" width="24" height="24" alt="" /></span>
