@@ -26,7 +26,7 @@ export function NormativeDocuments() {
     <div className="document-rows">
       {normativeDocuments.map(document => <a className="document-row normative-document-row" key={document.slug} href={`/documents/${document.slug}.pdf`} target="_blank" rel="noreferrer" aria-label={`Abrir resumen en PDF: ${document.title}`}>
         <span className="document-pdf"><img src="/assets/doc-pdf.svg" width="24" height="24" alt="" /></span>
-        <span className="document-content"><span>{document.title}</span><small>PDF · Negofin</small></span>
+        <span className="document-content"><span>{document.title}</span><small>PDF</small></span>
         <span className="document-cta">Conferir<span className="document-arrow" aria-hidden="true"><img src="/assets/arrow-document.svg" width="20" height="20" alt="" /></span></span>
       </a>)}
     </div>
