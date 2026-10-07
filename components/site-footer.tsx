@@ -48,7 +48,7 @@ export function SiteFooter() {
         <div className="footer-group social"><h2>Redes Sociales</h2><div className="social-icons">{socialLinks.map(({name, icon, href}) => <a key={name} href={href} target="_blank" rel="noreferrer" aria-label={`GS3 en ${name}`}><img src={`/assets/social-${icon}.svg`} width="24" height="24" alt="" /></a>)}</div></div>
       </div>
     </div>
-    <small>© 2026 GS3 S.A. - Instituición Financieira. 0000000000/000 Rua Xxxxx Xxxxx, 00, - Ciudad del Este, Alto Paraná - 00000-000</small>
+    <small>© 2026 GS3 S.A.</small>
     <span className="copy-toast" role="status" aria-live="polite" aria-hidden={!copied} data-visible={copied} data-error={copyFailed}>{copyFailed ? 'No se pudo copiar. E-mail: contacto@gs3.com.py' : 'E-mail copiado'}</span>
   </footer>;
 }
