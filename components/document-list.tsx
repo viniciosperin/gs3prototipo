@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const documents = [
   { slug: 'gerenciamento-de-risco-julho-2026', title: 'Gerenciamento de Risco – Julho de 2026', year: 2026 },
@@ -53,7 +54,7 @@ export function DocumentList({ multiple = false, year = false }: { multiple?: bo
     : multiple ? documents : documents.slice(0, 1);
 
   return <section className="documents" aria-labelledby="documents-title">
-    <div className="documents-heading"><h2 id="documents-title">Documentos</h2>{year && <label className="documents-year-label">Año: <select className="documents-year-select" aria-label="Seleccionar año de documentos" value={selectedYear} onChange={event => setSelectedYear(Number(event.target.value))}>{availableYears.map(documentYear => <option key={documentYear} value={documentYear}>{documentYear}</option>)}</select></label>}</div>
+    <div className="documents-heading"><h2 id="documents-title">Documentos</h2>{year && <div className="documents-year-label"><span>Año:</span><Select value={String(selectedYear)} onValueChange={value => setSelectedYear(Number(value))}><SelectTrigger className="documents-year-select-trigger" aria-label="Seleccionar año de documentos"><SelectValue /><img src="/assets/arrow-down-s-line.svg" alt="" aria-hidden="true" /></SelectTrigger><SelectContent position="popper" align="end" className="complaint-type-select-content">{availableYears.map(documentYear => <SelectItem key={documentYear} value={String(documentYear)} className="complaint-type-select-item">{documentYear}</SelectItem>)}</SelectContent></Select></div>}</div>
     <div className="document-rows">
       {items.map(document => <a className="document-row" key={document.slug} href={`/documents/${document.slug}.pdf`} target="_blank" rel="noreferrer" aria-label={`Abrir PDF: ${document.title}`}>
         <span className="document-pdf"><img src="/assets/doc-pdf.svg" width="24" height="24" alt="PDF" /></span>

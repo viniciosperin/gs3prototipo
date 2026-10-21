@@ -17,7 +17,7 @@ Para gerar a versão de produção: `npm run build`.
 
 As dez referências adicionais foram integradas: modal de serviços, página sobre o Grupo Sarabia e oito páginas de transparência. O botão Nuestra historia da home aponta para a página sobre em `/historia`.
 
-Os documentos e o formulário de denúncias permanecem desativados por decisão do usuário. Consulte `PENDENCIAS.md` antes de alterar esses componentes ou ativar integrações. Os dados e nomes de documentos são os exemplos do Figma; aguardam os arquivos definitivos.
+As listas de documentos devem aparecer apenas nas páginas que já tenham arquivos disponíveis. Consulte `PENDENCIAS.md` para seguir o padrão visual e funcional do componente reutilizável antes de adicionar novos documentos.
 
 ## Referências
 

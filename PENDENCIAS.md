@@ -1,5 +1,11 @@
 # Memória do projeto GS3
 
+## Diretriz atual para documentos — 21/10/2026
+
+- Não renderizar o bloco de documentos em uma página enquanto ela não tiver arquivos disponíveis. As páginas `Tasas` e `Gestión de Reclamos` ficam sem esse bloco até a inclusão dos PDFs.
+- Manter o componente reutilizável em `components/document-list.tsx`. Quando houver novos arquivos, incluí-los apenas na página correspondente, usando o mesmo cartão, tipografia, ícone, link de conferência e seletor anual já adotados nas outras páginas do site.
+- Usar o ano informado no arquivo para alimentar o seletor anual; não exibir anos ou cartões sem documentos correspondentes.
+
 ## Decisão do usuário — 11/09/2026
 
 O usuário ainda não tem os documentos nem a integração para receber denúncias. Manter esses componentes nas páginas, mas NÃO ativar cliques, downloads ou envios até receber os materiais. Não substituir por links de e-mail e não simular confirmação de envio.
