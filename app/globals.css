@@ -806,7 +806,7 @@ button,[role="button"]{-webkit-user-select:none;user-select:none}
 .complaint-form .complaint-type-select-trigger>svg{display:none!important}
 .complaint-type-select-content{width:var(--radix-select-trigger-width);min-width:var(--radix-select-trigger-width);padding:4px 8px;border:1px solid #f0f3f0;border-radius:12px;background:#fff;color:#576257;box-shadow:0 4px 16px rgba(13,22,13,.08)}
 .complaint-type-select-content [data-radix-select-viewport]{padding:0}
-.complaint-type-select-item,.complaint-type-select-content .complaint-type-select-item{min-height:48px;padding:10px 12px;border-radius:8px;color:#576257;font-family:inherit;font-size:18px;font-weight:400;line-height:1.55;cursor:pointer}
+.complaint-type-select-item,.complaint-type-select-content .complaint-type-select-item{min-height:48px;padding:10px 12px;border-radius:8px;color:#576257;font-family:inherit;font-size:16px;font-weight:400;line-height:1.55;cursor:pointer}
 .complaint-type-select-content .complaint-type-select-item[data-highlighted]:not(:hover){background:#fff;color:#576257;outline:none}
 .complaint-type-select-content .complaint-type-select-item:hover{background:#f9faf9;color:#576257;outline:none}
 .complaint-type-select-content .complaint-type-select-item [data-slot="select-item-indicator"]{display:none}
@@ -835,16 +835,16 @@ button,[role="button"]{-webkit-user-select:none;user-select:none}
 .complaint-form .form-grid{gap:20px}
 .complaint-form .form-grid>label,.complaint-form .form-select-field,.complaint-form .complaint-upload-field>label{color:#0d160d;font-size:18px;line-height:1.55}
 .complaint-form .form-grid>label,.complaint-form .form-select-field{gap:8px}
+.complaint-form .form-select-field>label{font-size:18px;line-height:1.55}
 .complaint-form .form-grid input,.complaint-form .form-grid textarea{border:1px solid #f0f3f0;border-radius:8px;background:#fff;padding:12px;color:#0d160d;font:inherit;line-height:1.55}
 .complaint-form .form-grid input{height:48px}
 .complaint-form .form-grid textarea{height:123px;min-height:123px}
-.complaint-form .complaint-type-select-trigger{background:#fff}
+.complaint-form .complaint-type-select-trigger{height:48px;min-height:48px;background:#fff;font-size:16px}
 .complaint-form .consent{gap:6px;margin:16px 0 24px;color:#0d160d;font-size:18px;line-height:1.55}
 .complaint-form .consent>input{width:16px;height:16px;margin:5px 0 0;accent-color:#14a31a}
 .complaint-form>.action-filled{min-height:40px;padding:0 18px;border-color:#14a31a;background:#14a31a}
 .complaint-form>.action-filled:hover{border-color:#14841d;background:#14841d}
 .complaint-form>.action-filled:active{border-color:#0f6316;background:#0f6316}
-.complaint-form>.form-notice{margin-top:16px;font-size:14px}
 @media(max-width:1100px){.complaint-form{padding:32px}}
 @media(max-width:650px){.complaint-form{padding:20px}}
 .contact-fields input,.contact-fields textarea{font-size:16px}

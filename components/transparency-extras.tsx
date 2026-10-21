@@ -144,7 +144,6 @@ export function ComplaintsContent() {
           </div>
           <label className="consent"><input type="checkbox" required /><span>He leído la <a href="/transparencia/privacidad">Política de Privacidad y Protección de Datos</a>.</span></label>
           <button className="action action-filled" type="submit">Enviar</button>
-          <p className="form-notice">Al enviar, se abrirá un correo dirigido a GS3. Si seleccionó archivos, deberá adjuntarlos al correo.</p>
         </form>
         <p className="complaint-after-note">En caso de no estar conforme con la respuesta, el cliente podrá acudir a la Superintendencia de Bancos del BCP dentro de los 60 días hábiles siguientes o a la Secretaría de Defensa del Consumidor (SEDECO).</p>
       </div></div>
