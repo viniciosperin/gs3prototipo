@@ -57,7 +57,7 @@
   "privacidad": {
     "title": "Política de Privacidad y Protección de Datos",
     "intro": [
-      "GS3 S.A. trata los datos personales de sus clientes, colaboradores y terceros con el más alto estándar de protección, en cumplimiento de la Ley N.° 7593/2025 de Protección de Datos Personales de la República del Paraguay."
+      "GS3 S.A. trata los datos personales de sus clientes, colaboradores y terceros conforme a la normativa vigente en materia de protección de datos personales."
     ],
     "sections": [
       {
@@ -87,6 +87,12 @@
         "title": "Consentimiento",
         "paragraphs": [
           "GS3 solicita consentimiento expreso antes de utilizar sus datos en procesos de scoring crediticio. Sin este consentimiento, no es posible procesar su solicitud de crédito."
+        ]
+      },
+      {
+        "title": "Consultas o reclamos",
+        "paragraphs": [
+          "Para consultas sobre el tratamiento de sus datos personales, puede escribir a contactos@gs3.com.py. Para presentar un reclamo o denuncia, puede escribir a denuncias@gs3.com.py."
         ]
       }
     ]

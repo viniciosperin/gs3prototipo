@@ -26,7 +26,7 @@ export function ContactModal({
       '',
       `Mensaje: ${form.get('message')}`,
     ].join('\n');
-    window.location.href = `mailto:contacto@gs3.com.py?subject=${encodeURIComponent('Consulta desde el sitio GS3')}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:consultas@gs3.com.py?subject=${encodeURIComponent('Consulta desde el sitio GS3')}&body=${encodeURIComponent(body)}`;
   }
 
   return (
@@ -41,18 +41,25 @@ export function ContactModal({
           </DialogClose>
           <img className="contact-modal-logo" src="/assets/contact-modal-logo.svg" width="105" height="26" alt="GS3" />
           <DialogTitle className="contact-modal-title">
-            ¿Querés conocer nuestras soluciones financieras o hacer una consulta? Contanos qué necesitás.
+            ¿Querés conocer nuestras soluciones financieras o hacer una consulta? Contáctanos
           </DialogTitle>
         </header>
         <div className="contact-modal-body">
           <form className="contact-form" onSubmit={sendByEmail}>
             <div className="contact-fields">
-              <label>Nombre Completo<input name="name" autoComplete="name" placeholder="Walter Sanabria" required /></label>
-              <label>Correo Electrónico<input name="email" type="email" autoComplete="email" placeholder="waltersanabria@gs3.com.br" required /></label>
-              <label>Teléfono / WhatsApp<input name="phone" type="tel" autoComplete="tel" placeholder="+595 999 000 001" required /></label>
-              <label className="contact-message">Mensaje<textarea name="message" placeholder="Deixe sua mensagem..." required /></label>
+              <label>Nombre Completo<input name="name" autoComplete="name" placeholder="Su nombre" required /></label>
+              <label>Correo Electrónico<input name="email" type="email" autoComplete="email" placeholder="nombre@correo.com" required /></label>
+              <label>Teléfono / WhatsApp<input name="phone" type="tel" autoComplete="tel" placeholder="+595 981 123 456" required /></label>
+              <label className="contact-message">Mensaje<textarea name="message" placeholder="Contanos brevemente cómo podemos ayudarte." required /></label>
             </div>
-            <label className="contact-consent"><input type="checkbox" required />Acepto la Política de Protección de Datos Personales</label>
+            <Dialog>
+              <DialogTrigger asChild><button className="contact-consent" type="button">Conozca más sobre nuestra Política de Protección de Datos Personales</button></DialogTrigger>
+              <DialogContent className="contact-policy-dialog">
+                <DialogTitle>Política de Protección de Datos Personales</DialogTitle>
+                <p>GS3 S.A. trata los datos personales de sus clientes, colaboradores y terceros conforme a la normativa vigente en materia de protección de datos personales.</p>
+                <a href="/transparencia/privacidad">Leer la política completa</a>
+              </DialogContent>
+            </Dialog>
             <button className="contact-submit" type="submit">Enviar Consulta</button>
           </form>
         </div>
