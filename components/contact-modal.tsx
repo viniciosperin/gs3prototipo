@@ -52,14 +52,7 @@ export function ContactModal({
               <label>Teléfono / WhatsApp<input name="phone" type="tel" autoComplete="tel" placeholder="+595 981 123 456" required /></label>
               <label className="contact-message">Mensaje<textarea name="message" placeholder="Contanos brevemente cómo podemos ayudarte." required /></label>
             </div>
-            <Dialog>
-              <DialogTrigger asChild><button className="contact-consent" type="button">Conozca más sobre nuestra Política de Protección de Datos Personales</button></DialogTrigger>
-              <DialogContent className="contact-policy-dialog">
-                <DialogTitle>Política de Protección de Datos Personales</DialogTitle>
-                <p>GS3 S.A. trata los datos personales de sus clientes, colaboradores y terceros conforme a la normativa vigente en materia de protección de datos personales.</p>
-                <a href="/transparencia/privacidad">Leer la política completa</a>
-              </DialogContent>
-            </Dialog>
+            <a className="contact-consent" href="/transparencia/privacidad">Conozca más sobre nuestra Política de Protección de Datos Personales</a>
             <button className="contact-submit" type="submit">Enviar Consulta</button>
           </form>
         </div>
