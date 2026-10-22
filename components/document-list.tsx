@@ -16,7 +16,7 @@ const normativeDocuments = [
   { slug: 'cambios-ley-1015-ley-3783-2009', title: 'Ley N.º 3783/2009 - Modifica la Ley 1015' },
   { slug: 'registro-otorgantes-credito-res-7-2019', title: 'Resolución N.º 7/2019 - Registro de otorgantes de crédito' },
   { slug: 'transparencia-credito-res-30-2022', title: 'Resolución N.º 30/2022 - Transparencia de otorgantes de crédito' },
-  { slug: 'tasas-interes-res-23-2023-acta-9-23-febrero', title: 'Resolución N.º 23, Acta N.º 9 - Tasas de interés', url: 'https://www.bcp.gov.py/documents/20117/0/Resolucion%2B23%2Bacta%2B9%281%29.pdf/04511247-ca29-0702-cd22-2a9e0dabc734?t=1743517105359.pdf' },
+  { slug: 'tasas-interes-res-23-2023-acta-9-23-febrero', title: 'Resolución N.º 23, Acta N.º 9 del 23 de febrero de 2023 - Tasas de interés' },
   { slug: 'reclamos-consultas-res-2-2021', title: 'Resolución N.º 2/2021 - Reclamos y consultas' },
   { slug: 'inscripcion-casas-credito-res-132-2019', title: 'Resolución SB.SG. N.º 132/2019 - Casas de crédito' },
   { slug: 'gobierno-corporativo-res-16-2022', title: 'Resolución N.º 16 - Gobierno corporativo' },
